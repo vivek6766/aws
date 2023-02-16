@@ -1,0 +1,170 @@
+Different services in AWS:
+  1) compute
+  2) storage
+  3) database
+  4) security
+  5) management
+  6) customer engagement
+  7) App integration
+1) Compute Domain:
+    AWS EC2, Elastic Beanstalk, AWS Lambda, Autoscaling, 
+    AWS LoadBalancer, AWS ECR, AWS ECS
+    
+  1) AWS EC2: Elastic compute cloud is one of the integral parts of the  aws ecosystme. EC2 enables on-demand,
+  scalabale computing capacity in the aws coud.
+  -Its basically a raw server that is given to you. You can do anything, make a web server or a operating system etc...you can make a ram of your choice, type of os
+  like linux or windows etc........
+  
+  2) Elastic beanstack: you can quiclky deploy and manage applications in the aws cloud without having to learn about the infrastructure
+  that runs those applications.In AWS EC2 you can make it to do anything, you can make it a web server, install softwares, make database server. But whereas elastic beanstack 
+  has some restrictions, it is lonely a web application server, you cannot install any softwares.
+  -AWS ec2 is a infrastructure as a service whereas elastic beanstack is a platform as a service. Everything is pre configured in elastic beanstack.
+  -it is used to quickly deploy web applications.
+  - It will host an application but only you can only deploy web apps quickly. You can import your websites from local or you can start designing from scratch as well.
+  But in EC2 you can do anything.
+  
+  3) AWS Lambda: It is a compute service that lets you run code without provisioning or managing servers.
+    -It is a advanced version of EC2. you can deploy an application in it but you cannot host an application in it.
+    -It is used for processing the backend code.
+    - It will not host an applicatoin
+  
+  4) AWS Elastic LoadBalancer: It distributes incoming application or network traffic accross multiple targets such as amazon EC2 instances, containers, 
+  and all IP addresses in multiple availability  Zones.
+  -Its basically keeps track of the activity of the severs. If a server is unhealthy it stops transfering server traffic to that server and send to other healthy server
+  until it cools down. This is the main job of the Loadbalancer.
+  -For eg: If there are three servers in which the trafiic is distributed if all the three severs are healthy and working fine the loadbalancer will distributes
+  the traffic equally among all the three services. But if there is any overload in one of the server the loabalancer will stops sending the traffic to that server 
+  and diverts it to the other two server until it cools downs.
+  -If we wonder how can we decide how how much traffic is coming to deploy accordingly to servers, then the next service will comes into play which is AWS auto scaling
+  
+  5) AWS Auto Scaling: Monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possoble cost.
+  -So basically it mainatins the track of how much traffic is incoming and how to handle them by distributing the load to different instances.
+  -If the incoming traffic is going beyond 80% then the auto scaling automatically deploys additional instances to takecare of the extra load. At the same time if 
+  the incoming traffic is below 40%, it decreases the instances and allot them to other resources or keep them in idle mode.
+  
+  6) AWS Elastic container registry(ECR): It is a fully managed docker container registry that makes it easy for developers to store, manage and deploy docker 
+  container images.
+  -Basically a docker is a tool which stores many conatiners at one place, where each container is a virtual machine with separate operating system with min size
+  of 40MB. So to store these containers ECr sevres as a docker conatiner which hold all these containers at one place. Suppose if there is a windoes operating system
+  with 40mb in size conatiner this will be stored in ECR. But if you want to run this conatiner there is another service called ECS( Amazon Elastic service).
+  
+  7) Amazon ECS(amazon elastic container service): It is highly scalable,high performance orchestartion service that supports docker containers and allows you to 
+   easily run and sacle containerized applications on AWS.
+   -It basically runs these conatiners whenever necassary and if there is anything wrong with this container it relaunches it again.
+   
+ 2) AWS Storage Domain:
+    1) Amazon S3
+    2) Amazon Glacier
+    3) Amazon Elastic file system
+    4) AWS Storage Gateway
+    
+  1)Amazon S3(Amazon simple Storage Service): It is an object storage service that offers industry-level scalability, security and performance.
+      User--> File uploaded or dowmload--> Internet--> Amazon S3 bucket
+    Storage domain typically contains the binary file slike images, music files, videos and others. These will be stored in these service. Like, In a web page
+    the images, gifs and videos should be loaded when the website opens so all these files are retrieved from here.
+    
+   2) AWS glacier: It is a secure, durable and extremely low cost cloud storage service for data archiving and long term-back up
+        server--> backup-->amazon s3 glacier.
+     Glacier is strictly a back up service and low cost. It takes more time to retrive the files from here.
+   
+   3) Amazon Elastic file System(EFS): It provides a simple, scalable, elastic filesystem for linux based workloads for use with AWS cloud services and on-premises
+       resources
+       - The best advantage of EFS is, It can be mounted on your server or computer and can be avaialble for all other servers which it is mutually shared.
+          When you create a windows server EFS will create a volume for itself and it can be shared with other netwroks if necessary. It acts as a a shared drive
+          for 10's and 1000's of computers which is having the same volume. inside them and that same volume would be EFS. The changes in one system will be changed in other systems 
+          as well. Can be mounted in both windows and Linux as well.
+          
+   4) AWS Storage Gateway: It connects an on-premise software appliance with cloud based storage to provide seamless integration with data security features between
+   your on-premises IT environment and the AWS storage infrastructure.
+   - On premises Application ---> AWS Storage Gateway ---> AWS cloud Infrastructure.
+
+
+3) AWS Database Domain:
+      1) Amazon RDS
+      2) DynamoDB
+      3) Amazon RedShift
+      4) Elasticache
+    
+    1) Amazon RDS(Amazon Relational Database Service):
+        It makes it easy to set up, Operate and scale a relational database in the cloud.
+        --It is a service under where we can lauch many services like amazon aurora, mariaDb, mysql, microsoft server etc... But RDS basically manages these databases.
+       
+    2) Amazon DynamoDB: It is a key-value and document database that delivers single-diit millisecond performances at any scale.
+        --It is a NO SQL database, No SQL means whenever you collect unstructured data like the data which does not have any format like sqlm then DynamoDB comes
+        into play which manages these kinds of data.
+    
+    3) Amazon RedShift: It is a fast, scalable data warehouse that makes it simple and cost effective to analyse all your data accorss your data 
+    warehouse and data lake.
+    --It is a warehouse where multiple database engines are stored and manages to gives output whenever necessary.
+      -- Input--> All data is stored in the S3 bucket--> Redshift--> Output.
+      
+   4) Amazon Elastic cache: It can be used to seamlessly deploy, run and scale popular open source compatible in-memory data stores.
+     It is a layer between client and the server, whenever a client is asking for some data, when he writes the query and submits it, the elastic cache process it and 
+     gives the output. when the same query is asked again multiple times, then elastic cache stores these frequemtly asked queries and gives the output instantly without
+     wasting time by running the query again. It saves the overhead time and increases performance.
+     
+
+4) AWS security Domain:
+      1) IAM
+      2) AWS KMS
+      
+     1) IAM(dentity and Access Managament): It enables you to manage access to  AWS services and resources securely.
+      --It basically restricts multiple user access in a single aws account. Like big companies like netflix, prime has only single account
+      where it has multiple user accounts inside for different kinds accesses. So, It restricts this access from one user to other and secures the service in a single\
+      umbrella.
+      
+     2) KMS(AWS Key management service): It makes it easy for you to create and manage keys and control the use of encryption acrss a wide range of aws services
+     and in your applications.
+     --we are using key pairs to create a service in ec2, so these key pairs functionality is handled by this KMS service. If we want to create a new key pair,
+     we just have to  create a new one.
+     -- Plaintext--> KMS--> Cipher Text
+                     (Data key)
+                     
+5) AWS Services Management:
+    1)AWS Cloudformation
+    2)AWS OpsWorks
+    3) AWS CloudTrail
+    4) Cloud Watch
+    
+     1) AWS Cloudformation: It provides a common language for you to describe and provision all the infrastructure resources in your cloud environment.
+     
+     2) AWS OpsWorks: It is a configuration service that provides managed instances of chef and puppet. Chef and puppet are automation platfroms.
+     
+     3) AWS CloudTrail: It is a service that enables governance, compliance, operational auditingand risk auditing of your AWS account. With cloudtrail, you can log, continoulsy
+     monitor and retain account activity related to actions accross your AWS infrastruture.
+     --It is basically stores the log data of whats happening in your aws account and keeps track of everything, every llogin details, the changes made by the users
+     and every digital footprint that is happening in your aws account. we just need to connect to aws cloudtrail to access this feature. And this log data can be \
+     further used to analyse further for future developments.
+     track user activity and API usage:--> furure usage
+          capture-->act--> store--> review
+     
+     4) Cloud watch: It ia monitoring and management service built for developers system operators, site reliability engineers(SRE), and IT managers.
+        -- It sets an alarm if there is any action is needed like it will send an email about any event and lets you know.
+        
+6) AWS customer engagement domain:
+        1) Amazon connect
+        2) Simple email service
+        
+        1) Amazon connect: It is a ready customer contact center, which can help you setup your IVR calls to agents in the shortest time possible.
+        2) Amazon Simple email service(Amazon SES): It is a cloud based- email sending service designed to help digital marketer and application developers send marketin, notofication, 
+        and transactional emails.
+        
+ 7) AWS App Integration:
+ 
+        1) Simplw notification service
+        2) Simple queue service
+        
+        1)Amazon Simple notification service(SNS): It is a highly available, durable, secure, fully managed pub/sub messaging service
+        that enables you to decouple microservices, distributed systmes and serverless applications.
+        --It filters the notifications recieved from the publishers and send it to the relevant services like aws lambda or aws sos etc..
+        
+        2)Amazon Simple queue service(SQS): It is fully managed message queuing service that enables you to decouple and scale microservices
+        distributed systmes and serverless applications.
+        
+8) AWS pricing:
+1) Pay as you go: It is widely used model. Whatever amount of time you will be using the server for, you will be charged for that 
+and the rest is given to you.
+2) save when you reserve: Giving the time of usage like 3 years of continous usage. This will enables aws to offer the discount.
+3) pay less by using more: The more you will be using instance the less the pricing will comes down.
+
+
