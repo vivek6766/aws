@@ -1,0 +1,2670 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ESSENTIALS OF CLOUD COMPUTING:
+
+CLOUD MODELS:
+
+Public, Private, Community and hybrid cloud models.
+1) Public cloud model: 
+   --Public services are owned by the cloud service providers and services are delivered over internet.
+   -- Unlimited resources, multi tenant systems and resilient towards any failures(can be repaired in no time). Maintainance can be taken care by the service 
+   providers.
+    --Best suited for: Variable workload, Test & developement
+    --Advantages: Lowest TCO(Total cost of ownership), Faster deployment and rapid elasticity.
+    --Challenges: Data security and privacy.
+    -- when you need to conduct a survey in several geographic locations, public model is best, after completing the surveys
+    and collecting the required data you can simply terminate the instances on those locations if we are not using anymore.
+    
+2) Private cloud: It is operated soley for a specific organization and the infrastructure can be build on premise or online.
+    --Single tenant, data location can be anywhere. Compliance and regulatory requirements.
+    --Best suited for: sensitive data and legal compliance.
+    --Advantages: Security and control. Optimized performance.
+    --Challenges: High cost of ownership and skillset is required.
+    egL Givernment agencies uses this private cloud and it is highly costly.
+
+3) community cloud model: It will be shared by serveral organizations for a common purpose and the services are offered through internet.
+    --Infrastructure is shared, multi tenant and community driven governanance.
+    --Best suited for: Collaboration of universities, groups of hospitals.
+    --Advantages: Lowest TCO and rapid Elasticity.
+    --Complex IT governance and skillset.
+
+4) Hybrid model: It is combination of one or two cloud models based on the requirement. Eg: private and public or public and community.
+    --benefits of both private and public deployment models.
+    --Data exchanges between public and private clouds.
+    --control over sensitive assets, flexible.
+    --Cloud burst is possible in times of high traffic, it can easily goes from public to private model based on the occassions.
+    --Best suited for: Cloud bursting, on demand access and sensitive data
+    --Advantages: Lowest TCO, high performance, Rapid elasticity and highly customizable.
+    --Challenges: Portbilty, migration and integration
+
+
+CLOUD SERVICE MODELS:
+  1)Software as a service(SaaS):
+    --Readily available software application that are already designed and programmed
+    --Accessed through web browser
+    --No visibilty over backend.
+    --Billed based on subscription
+    Eg: Microsoft office 365, google apps, microsoft teams and slack channel.
+  2) platform as a Service(PaaS):
+      --Provides platforms for developing and hosting apps on the Cloud service providers' infrastructure, reducing infrastructure management effort 
+      --Runtime, platfrom and tools are set up by the creator
+      --No management effort.
+      --Less control over infrastructure since the service provider mostly controls it.
+      --Control over the application code we desgin and program.
+      Eg: App cloud from salesforce.com, google App Engine(GAE) from google cloud platform, openshift from red hat and oracle cloud platform from oracle
+  3)Infrastructure as a service(IaaS):
+      --Compute, storage and network resources.
+      --Control over the OS and cloud storage devices. 
+      --configure development environment remotely.
+      Eg: Elastic compute cloud(EC2) from Amazon web services
+          virtual machines from azure
+          google compute engine(GCE) from google cloud platform.
+         
+   Important points:
+    --IT Team in of a Telecom organization requires a readily available financial solution that can be used without adding or installing any extra 
+    software component. Which Deployment model is most appropriate to use?
+    options: 1) platform as a service 2) software as a service 3) infrastructure as service
+    ans: Software as a service: SaaS applications are readily available solutions that can be put to use. You pay based on consumption.
+    platform as a service: PaaS does not provide readily available apps. You need to develop the app on the platform provided by the CSP.
+    infrastructure as service: IaaS supplier provides only infrastructure. You need to use your platform and develop the applications.
+    --A startup enterprise offers workforce management and recruitment process outsourcing solutions to its customers. They want an office
+    automation solution immediately, to help their staff collaborate and work efficiently. Which of the following solutions would be best fit?
+    ans: If you want a immediate solution then saas is the best fit. Purchase a SaaS solution for office automation.
+         -custom build pass takes time and effort.
+         -
+    --An enterprise offers solutions to reduce risk in the agriculture supply chain by digitizing commodity sales, trading and logistics. Makes 
+    the data available in real time. In order to efficiently deliver its services, they wish to upgrade their application frequently without the overhead of
+    managing the infrastructure. Which of the following solutions addresses these requirements?
+     ans: leverage platform as a service offering from the cloud service provider.
+ SERVERLESS SERVICE:
+ 
+    --It allows you to focus on only business productive functionalities rather than the IT infrastructure and management.
+    --Capacity provisioning, patching operating systems and other functions are managed by the service providers
+    --Reduces Total cost of ownership.
+    --Highly available and fault tolerant
+    --Also known as function as a service.
+    Eg: Consider a weather update in web application, when a user clciks on the weather update, the serverless function invoked and retrieves the data and
+    send the response.
+    This results in we only get charged for the event of execution only not the times taken to process the event and time taken to get the response from the server.
+    --Cost effective option.
+    Serverless Service(FaaS)                                               |         Platfom as a service(PaaS)
+    -Scales automatically based on the traffic based on number of requests |      Scales automatically by adding adding additional instances running
+    -runs for a short tenure, only when invoked                            |       Typically runa 24*7
+    -Less control over deployment environment                              |    developers has More control over deployment environment
+    -precise pricing, You will pay per use only.                           |  Cost may incur for few instance hours with less utilization.
+    
+MAJOR CLOUD SERVICE PROVIDERS: 1) AWS 2) AZURE 3) Google cloud
+
+VIRTUALIZATION:
+  Instead of creating phyisical machines for business, virtual machines helps to readily available and takes less TCO.
+  -- Isolates workloads hosted on physical infrastructure.
+  -- Virtual machines are created from the physical infrastructure.
+  --Hypervisor manages resources for virtual machines.
+  -- Each VM is an isolated environment.
+  Two types: 
+      1) bare metal virtualization. does not contain any OS on the host. eg: vmware etc..
+      2) Hosted virtualixation: contains an OS to run and maintain the administrative functions. eg: orcale, vmbox etcc/
+      
+      Important questions:
+      You are an architect for an enterprise that aims to develop online games with low latency and high performance. 
+      which of the following approaches would you choose to deploy the game?
+      high performance. Which of the following approaches would you choose to deploy the game?
+      Ans: Leverage bare metal or Type 1 hypervisor as it delivers at low latency. TYPE1 or bare metal.
+
+CONTAINERS: 
+    Why containerization is performed?
+    With these cloud technologies there is a need for the applications to deploy at anywhere anytime. This made the containerization comes into play
+    --Need to deploy on multiple IT environments. eg: apache,php,rhel ==> container
+    -- Makes the need of responsive applications with low cost
+    -- Improve resource utilization
+    --Architecting suitable apps
+    
+    What are containers:
+      --It offers light weight runtime environment for app deplayment.
+      --Bundles all the required dependencies. 
+          App1 -- App2 -- App3-->Docker engine-->host operating system-->host hardware
+     Benefits of containers:
+        --Rapid scalability
+        --Uses less resources
+        --increased portability
+        --greater efficiency.
+        
+      Difference between Containers and virtual machines:
+        Containers:                                               Virtual machines:
+        Boots in milli seconds                                    Boots in minutes
+        Requires less resources such as memory, storage etc...    Needs more resources
+        Higher isolatoin level                                    Lower isolation level
+        Highly portable                                           Highly portable
+        Shares OS libraries and kernal                            Doesn't shares OS with the host machine
+        No hypervisor required                                    Requires a hypervisor
+        
+    Containerization using docker:
+        --Open source docker engine
+        --provides both linux and windows based containers
+        --Containerized applications run anywhere consistently
+        --Docker CLI, API
+        --you can build custom docker container using docker image registry
+ 
+ CLOUD NATIVE APPLICATION DEVELOPMENT:
+      1) Microservices: This approach integrates the scalable nature. If one is failed other instances will helps the job done.
+          Advantages: Independent, High fault tolerance and enables continous delivery, supported well by containers and scalabilty and reusability
+      2) Devops: It is collection of tools and practices that enables high velocity development., Agile in development.
+      3) CI/CD(continous integration/continous delivery): 
+          --Automates software release process
+          --Code chages trigger release pipeline automatically
+          --allows numerous deployements in a short span
+          Any changes made in the source code will automatically trigger the other stages and deploy the new product without manullay changing the other stages.
+      4) containers:
+           --Containers support cloud native development
+           --container is the basic unit of compute capacity
+           --faster start up time and rapid scaling.
+           
+      CLOUD MIGRATION:
+      CLOUD SECURITY:
+            Security Threats in cloud:
+              unauthorized access, data at rest: Data at one place is vulnerable for attacks. Data in transit: Data traffic in the cloud might be interupted by other
+              networks and leakge of data is possible.
+            Corporate Datacenter security                                      | Cloud security
+            Complete control over the infrastructure protection                | Physical security of the infrastructure is managed by cloud service provider
+            Higher total cost of ownership                                     | Lower TCO
+            API's to be created to mitigate critical scurity threats           | Provides secure API's to work with cloud resources
+            Continous resources monitoring is to be performed                  | CSP's monitor physical hardware, you need to monitor access to your assets
+        Cloud vendor is responsible for security of the cloud:
+            Software security, network security and gloabl infrastructure security
+        Customer is responsible for security IN the cloud:
+            Firewall configuration, data security at rest and in transit and also access control.
+            Cloud security features:
+              --Organization policies
+              --access control
+              --encryption
+              --compliance, monitoring and auditing
+            Best practices:
+            --Understand the shared responsibility model- most of the acses the security breaches happens due to the indequate understanding of the responsibilty model.
+            --Always encrypt your data at transit or rest.
+            --Use github secrets or Aws msecrets manager etc..
+            --Do not leave out security credentials and tokens.
+            Mitigate unauthorized access.
+            
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ AWS SERVICES OVERVIEW:
+ 
+  AWS COMPUTE SERVICES:
+   1) Amazon EC2(Elastic Compute cloud): Elastic compute cloud is one of the integral parts of the  aws ecosystme. EC2 enables on-demand,
+       scalabale computing capacity in the aws coud.
+       -Its basically a raw server that is given to you. You can do anything, make a web server or a operating system etc...you can make a ram of your choice, type of os
+       like linux or windows etc..
+       --Provides scalable computing
+       --Launch as many or as few virtual servers as you need
+       --configure security and networking and manage storage.
+     Amazon EC2 Features:
+   Amazon Machine image: Its a template that defines OS for the serves. This will helps you launch new servers thats already have custom applications and start running
+       them instantly without any delay.
+   Instance Types: This configures the ram, performance and storage of the EC2 instance
+   Key pairs: Use a private key instead of password. We need to provide the private key to login to your server, Once lost we cant access the server. It can never be
+       recovered. It must be protected carefully.
+   Instance store volumes: For temporarily store the data and will be gone after logged out of the server.
+   Amazon EBS volumes: These are  used to quickly access the data since these are fast devices.
+   Regions and availability zones: Amazon Ec2 services can be launched anywhere anytime if we had a system and active internet connection.
+   Security groups: They allow you to provide ports and network traffic.
+   Elastic IP addresses: This feature provides static and dynamic ip addresses for dynamic cloud computing.
+   Tags: tags helps you to classify the resources.
+   Virtual private cloud: Helps you to decide which amazon vpc you want to launch.
+   AWS EC2 pricing models:
+    1) On demand instances: The payment will done in hourly or seconds type. No need to commit for the long term and also pay for what you use.
+      --No Up-front payment or long term commitment.
+      --Worloads that cannot be interupted.
+      --Developed or tested on amazon EC2 for the first time.
+      --a1.medium costs 0.0255$ per hour.
+      --a1.large 0.051$ per hour
+    2) Spot Instances: Needs in such case of high computing in short time. Gets upto 90% discount.
+       --Uses for Flexible start and end times, Have committed term usage 
+       --Very low compute prices.
+       --Urgent computing needs
+       --a1.medium costs 0.0049$ per hour a1.large $0.0098 per hour. 
+    3) Reserved instancs: Can be used for a long time committment like 1 year or more.
+        --Applications with steady state usage
+        --Applications that need reserved capacity
+        --Avaialable for 1 or 3year term
+        a1.medium - $0.015 per hour and a1.large $0.030 per hour.
+        EBS: Amazon Elastic block store: Provides elastic block storage for the EC2.
+           --EBS has 4 different types of volumes types to meet the anytype of workloads.
+           SSD: Delivers low latency and highest iops
+           HDD: Provides highest throughput.
+           
+ AWS Elastic Beanstalk:  you can quiclky deploy and manage applications in the aws cloud without having to learn about the infrastructure
+  that runs those applications.In AWS EC2 you can make it to do anything, you can make it a web server, install softwares, make database server. 
+  But whereas elastic beanstack has some restrictions, it is lonely a web application server, you cannot install any softwares.
+  -AWS ec2 is a infrastructure as a service whereas elastic beanstack is a platform as a service. Everything is pre configured in elastic beanstack.
+  -it is used to quickly deploy web applications.
+  - It will host an application but only you can only deploy web apps quickly. You can import your websites from local or you can start designing from scratch as 
+  well.But in EC2 you can do anything.
+  
+  Why we need Beanstalk: For ex, Jack is a developer and he wants to focus on writing a code and does not want to divert his attention to systme administration.
+    like spending lot of time confirguring managaing server loadbalancers and data networking instead of coding. To focus on only on coding and let others take 
+    care of the system administration tasks.
+      Elastic beanstalk helps this way, It is easy to use and deploy and scale applicatons.
+      eg: Java,.net,node.js,python, ruby and docker etc.. can run easily.
+      --You just need to write the code and upload it. 
+      
+AWS Lambda: 
+    It is a compute service that lets you run code without provisioning or managing servers.
+    -It is a advanced version of EC2. you can deploy an application in it but you cannot host an application in it.
+    -It is used for processing the backend code.
+    - It will not host an application.
+    --Why Lambda?
+      When you need lots of fucntionalities like uploading an image, in app purhcases and website clicks. All these funcitons will happen only by running specific 
+      codes designed in back end. But managing back end codes, manage operating systems, apply security patchs and scale the servers when there is huge traffic 
+      is not possible practically, this is where lambda comes into play.
+      AWS Lambda is a compute service that runs your back end code and responds to events such as objects uploads to amazon s3 bucket and updates amazon dynamodb table
+      or manages data in kinesis stream or controls in app activity. Once you upload the code in the lambda it controls all these additional functionaltites like
+      manages OS, patches security alerts, responds to the events, scaling and administration  and sends the real time matrics and logs to the amazon cloud watch.
+      all we need to do write the code. We simply charged for the usage we did in the server.
+       
+      
+
+ AWS Storage Domain:
+    1) Amazon S3
+    2) Amazon Glacier
+    3) Amazon Elastic file system
+    4) AWS Storage Gateway
+    1)Amazon S3(Amazon simple Storage Service): It is an object storage service that offers industry-level scalability, security and performance.
+      User--> File uploaded or dowmload--> Internet--> Amazon S3 bucket
+    Storage domain typically contains the binary file like images, music files, videos and others. These will be stored in these service. Like, In a web page
+    the images, gifs and videos should be loaded when the website opens so all these files are retrieved from here.
+    --provides easy to use management features.
+    Features of S3: 
+      --store as much as you need
+      --Keep multiple verions of objects
+      --Host static websites.
+      --replication of data if data is lost and need to back up.
+      --pay as you use.
+      --has different storage class.
+    S3 Use cases:
+    --Back up and restore
+    --disaster recovery
+    -- Archive data--> S3 glacier and deep arcive are cost effectitve for archiving the data
+    --For big data analytics.
+    --Hybrid cloud storage
+    --cloud native applications.
+  1) Amazon S3 Storage Classes:
+     There are different types of storage classes in S3:
+     1) S3 Standard: Used when data objects are most frequeltnly accessed.
+     2) S3 Standard IA: Used when data objects are less frequently accessed.
+     3) S3 Intelligent Tiering: For changing the data class from S3 standard and S3 standard IA if necessary can be done in this class. 
+     4) S3 One Zone-IA: Its present in one available zone only and the price is 20% less than others.
+     5) S3 Glacier: durable of 99.999% of objects across multiple AZ's, used for back up files
+     6) S3 Glacier Deep Archive:  This is for retaining the data for very long time, Its rarely accessed. Financial services,, health care
+         weather etcc.. data can be stored here.
+   2) AWS glacier: It is a secure, durable and extremely low cost cloud storage service for data archiving and long term-back up
+        server--> backup-->amazon s3 glacier.
+     Glacier is strictly a back up service and low cost. It takes more time to retrive the files from here.
+   
+   3) Amazon Elastic file System(EFS): It provides a simple, scalable, elastic filesystem for linux based workloads for use with AWS cloud services and on-premises
+       resources
+       - The best advantage of EFS is, It can be mounted on your server or computer and can be avaialble for all other servers which it is mutually shared.
+          When you create a windows server EFS will create a volume for itself and it can be shared with other netwroks if necessary. It acts as a a shared drive
+          for 10's and 1000's of computers which is having the same volume. inside them and that same volume would be EFS. The changes in one system will be changed in other systems 
+          as well. Can be mounted in both windows and Linux as well.
+         
+          
+   4) AWS Storage Gateway: It connects an on-premise software appliance with cloud based storage to provide seamless integration with data security features between
+   your on-premises IT environment and the AWS storage infrastructure.
+   - On premises Application ---> AWS Storage Gateway ---> AWS cloud Infrastructure.
+
+ 2) AWS glacier: It is a secure, durable and extremely low cost cloud storage service for data archiving and long term-back up
+        server--> backup-->amazon s3 glacier.
+     Glacier is strictly a back up service and low cost. It takes more time to retrive the files from here.
+   
+   3) Amazon Elastic file System(EFS): It provides a simple, scalable, elastic filesystem for linux based workloads for use with AWS cloud services and on-premises
+       resources
+       - The best advantage of EFS is, It can be mounted on your server or computer and can be avaialble for all other servers which it is mutually shared.
+          When you create a windows server EFS will create a volume for itself and it can be shared with other netwroks if necessary. It acts as a a shared drive
+          for 10's and 1000's of computers which is having the same volume. inside them and that same volume would be EFS. The changes in one system will be changed in other systems 
+          as well. Can be mounted in both windows and Linux as well.
+          
+   4) AWS Storage Gateway: It connects an on-premise software appliance with cloud based storage to provide seamless integration with data security features between
+   your on-premises IT environment and the AWS storage infrastructure.
+   - On premises Application ---> AWS Storage Gateway ---> AWS cloud Infrastructure.
+   
+ 
+ **AWS Networking services:
+ 
+ *Amazon VPC:
+ why we need Amazon VPC required: when organization create their own data centers, they also create a priivate network this network helps them to set up 
+ firewall rules, which help to protect the resources from network attacks. Only those traffic can reach the servers placed and the data center which is
+ allowed in the firewall rules of the network.
+ Eg: Suppose that there are three servers in an on premise data center. flow of traffic for the data ceneter is controlled by a private network.
+     server 1:<---------------- source-1 (DENY)
+     server 2:<---------------- source-2 (ALLOW)
+     server 3:<---------------- source-3 (ALLOW)
+     traffic originate in from source-1 is not allowed to enter the netwrok. hence, its locked and cant reach the servers.
+     however traffic coming from source-2 and source-3 are allowed. because its entering the private network enable to access the servers as shown.
+     so, having a network is a must in order to define firewall rules for the resources such as servers.
+     Amazon VPC(amazon virtual private cloud):
+       -Amazon VPC lets you set up a logically isolated segment of the aws cloud, where you can launch aws resources in a virtual network defined by you. you
+       choose the range of IP addresses for your VPC by using CIDR notations. you can use both IPv4 and IPv6 in your VPC for resources and applicatons.
+       also, you create subnets and define configuration of route tables and network gateways
+       -Have complete control over your virtual networking environment.
+       -It is very easy to customize your VPC.
+         eg: you can create both private and public subnets and then launch resource inside them such as bastion hosts in public subnets and database 
+         instances in private subnets.
+         -use multiple layers of security.
+        Amazon VPC components:
+         1) subnet: a range of IP addresses is called subnet. while launching a resource you can specify its subnet. A public subnet is for resources
+         that should be accessible from the internet. And a private subnet is for resources that should not be accessible from the internet.
+         2) Route table: a set of rules that guides network traffic in your amazon VPC is called a route table. a subnet can be explicitly associated
+         with a particular route table. Otherwise it is implicitly associated with the main route table.
+           Every route and route table specifies tge IP address range where you want the traffic to be directed, i.e the destination and the 
+           the gateway, network interface or connection through which the traffic sould be sent to the target. 
+         3) Internet Gateway: It is virtual device that enabled the communication between your VPC and the internet. An internet
+           gateway supports both IPv4 and IPv6 traffic. it does not lead to any availability risks or bandwidth constraints on your network traffic
+           and also its free of cost.
+         4) NAT gateway: you can use a NAT gateway to enable instances in a private subnet to connect to the internet or other aws public services
+           but stop the internet from establishing a connection with those instances.
+         5) VPC Endpoints: using VPC endpoint, you can create a private connection between your VPC and supported aws services. such as S3 and
+            VPC endpoints services driven by AWS private link without an internet gateway, VPN connection and NAT gateway.
+            ultimately instances in your VPC will not require any public IP addresses o communicate with public services. With VPC 
+            end points traffic between your VPC and the other service do not leave the amazon network.
+          6) VPC peering: This feature is for enabling communication between two VPC's over the private IP addresses. VPC peering is
+          possible between the VPCs in different AWS regions and different AWS accounts.
+          
+     Introduction to amazon cloudfront:
+      It is a fast, highly secure and programmable content delivery network service.
+      --You can deliver content to millions of users ata a itme and it can be static or dynamic content.
+      --You can securely deliver the content to your customer securely, Cloudfront provides free certificate  from amazon certificate manager 
+      --cloudfront also sheilds the network 4,5 level security threats
+      --cost effective
+   Introduction to Amazon route 53:
+        Usually DNS(Domain name system) works as a language of numeric IP adresses from one computer to another computer by reading different site anme like www.google.com, facebook.com etcc....
+        Route 53 is a DNS service that gives developers and adminsitrators helps a cost effective way to route end users to internet applications.
+          --It integrates seamlessly with other aws services like ec2, s3 and cloudfornt etcc to work together effectively for better outcome
+          --If one end user is failed it will reroutes to other end point as an alternative
+          --It gives 100% availability, integrates easily with other aws services and helps improves reliabilty with traffic flow.
+            
+AMAZON DATABASE SERVICES:
+      1) Amazon RDS
+      2) DynamoDB
+      3) Amazon RedShift
+      4) Elasticache
+    
+    1) Amazon RDS(Amazon Relational Database Service):
+        It makes it easy to set up, Operate and scale a relational database in the cloud.
+        --It is a service under where we can lauch many services like amazon aurora, mariaDb, mysql, microsoft server etc... But RDS basically manages these
+        databases.
+        Why RDS: To maintain databse services one has to overcome the challeges like
+        --patching,installation, hardware upgrades, security, scaling, backups, performance tuning, monitoring etc...
+     Amazon RDS can handle all these challenges at one place.
+      --Can create and scale relational database easi;y, automates time consuming administration and lets developers soley focus on the 
+      application management instead of worrying about the infrastructure management.
+      -- You can choose any of the six amazon rds types for your business needs:
+      postgreSQL, Amazon aurora, MYSQL, Oracle, MariaDB and SQL server.
+    Benefits of RDS:
+      --easy to administer
+      --highly scalable, available and durable
+      --fast, secure and cost effective.
+      
+        
+       
+    2) Amazon DynamoDB: It is a key-value and document database that delivers  millisecond performances at any scale.
+        --It is a NO SQL database, No SQL means whenever you collect unstructured data like the data which does not have any format like sqlm then DynamoDB comes
+        into play which manages these kinds of data.
+        With all the new database engines and new challenges to store the data sequentially, Amazon dynamo DB helps to scale huge requests, handles lots of traffic at a time
+        During amazon sales day, great indian festival dynamo DB helps to scale the usage of the database services.
+        --It is safe and secure way to handle database services and can handle one trillion requests per day.
+        
+    3) Amazon RedShift: It is a fast, scalable data warehouse that makes it simple and cost effective to analyse all your data accorss your data 
+    warehouse and data lake.
+    --It is a warehouse where multiple database engines are stored and manages to gives output whenever necessary.
+      -- Input--> All data is stored in the S3 bucket--> Redshift--> Output.
+      --processing and retrieving data from the data warehouses without worrying about the datawarehouse.
+      -- But maintaining data warehouses is very costly and challenging.
+      --So Amazon redshift overcomes all these challenges
+      --Amazon redshift serverless allows you to start, run and get data analystics in fast way possible without thinking about the warehouse management.
+      -- It automatically scales and provisions the warehouse management where you only need to focus on insights of the data 
+      --It can allow share and query live data across organizatoins, accounts and even regions.
+      
+      
+   4) Amazon Elastic cache: It can be used to seamlessly deploy, run and scale popular open source compatible in-memory data stores.
+     It is a layer between client and the server, whenever a client is asking for some data, when he writes the query and submits it, the elastic cache process it and 
+     gives the output. when the same query is asked again multiple times, then elastic cache stores these frequemtly asked queries and gives the output instantly without
+     wasting time by running the query again. It saves the overhead time and increases performance.
+     
+     
+AMAZON DEVELOPER TOOLS:
+  1) Introduction to AWS Cloud9: 
+  2) Introduction to AWS CodeCommit:
+      As your project and developement team grows larger finding a  highly available and secure ways to store version code becomes a challenging and costly, 
+      Its easy if we dont need to bother about managing instead focusing on code development.codecommit will solve this problem by giving all these functions in one platform.
+     Code Commit will helps in,
+     -- Secure, highly scalable and private git repositories.
+     --No hardware to manage and software to patch up. It is highly scalable, available and accessible.
+     --with code commit we can store binaries, images, and libraries.
+     --AWS code commit auttomatically encrypts your files in transit and at rest too. We dont need to worry about security.
+     --It integrated with identity and access management, this lets you control who has access to which application. One can chage the access from time based, 
+     region based etc..
+   3) Introduction to AWS CodeBuild:
+     With able to keep up with the competetion software developers need to deliver code changes to allow them in different set of applications and devices.
+     --This includes rapidly build and test code. But when there is athreshold developers need to wait for the long waiting time to build the code.
+     --AWS code build is fully managed continous integration service that can compiles source code, runs tests and produces build artifects. your team just needs to 
+     focus on commit code changes and code build will handles the code building, testing and compiling concurrently without any delay.
+     --You pay for only the build minutes you use. You can bring build your own environment or you can use already pre compiled environments.
+   4) Introdcution to AWS CodeDeploy:
+      Every developer always in a loop of developing the code, tetsing it and deploying it to the production. But Manually deploying the server will takes long time
+      results in errors and downtime. It causes complex and hard to maintain
+      --It would be nice if we automates the deployment of your application and you can rapidly deploy into production.
+      --AWS Codedeploy, A service that can coordinates application deployment and updates across amazon EC2 instances of any size.
+      --It automates your application deployment getting rid of the the need to do things manually.
+   5) Introduction to AWS CodePipeline:
+      In today's booming IT industry, developing applications rapidly and deploying them is the core success fo the many software companies.
+      Using traditional software process delivering and testing applications fastly is difficlut and error prone where Code updates are manullay developed, tested 
+      and deployed. What is all the software process is automated and allows you to test and release the code more frequently.
+      AWS CodePipeline:
+      --It allows you automatically test, deploy the code automatically without any delay.
+      --There will graphical funcitonality in the service where you can able to manage the code deployment's entire process.
+      --It works as pipeline where in each segment, it will automatically do its job like testing, building and deploying etc..
+      --Once the pipeline is ready, It will automatically build, test and deploys the code.
+      --It sets manual approval at each stage of the pipeline whether we need to approve or deny the code feature if it does not meet the standards.
+      --Code pipeline also stops the pipeline whenever an action fails to comply its rules such as unit test failure.
+      --It checks the minor and major bugs rapidly and deploy the code more frequently. this allows us to focus more on core product.
+      --Code pipeline is extensible and works with variety of source code, build, testing and deployment tools from AWS or third parties. It enables us to use 
+      different services at each stage of pipeline.
+ 
+ Introduction to AWS Monitoring and auditing Services:
+   1) AWS Config: 
+     -- AWS resources configuration evaluation
+     --Review relationships
+     --Detailed configuration histories
+     --Compliance check.
+   2) AWS Trusted advisor
+     --provision resources following AWS best practices
+     -- Covers-cost optimization, performance, security, fault tolerance and service limits
+     --Recommendations provided.
+   3) Inspector: 
+     --Vulnerabilities check
+     --Detialed assessment reports
+     -- check for vulnerabilties on EC2 instances.
+   3) Flow logs:
+     --IP traffic capturing
+     --Charges to deliver logs to  s3 apply
+     --VPC, a sbunet or a network intefere.
+   4) AWS cloud trail:
+     --AWS account auditing and compliance check
+     --tracking and troubleshooting
+   5) AWS cloudwatch:
+     --monitoring and observability service
+     --logs, metrics and events
+     --set alarms and automate actions.
+     
+     
+AWS Identity services:
+   When using a sinble aws account from  multiple users will concurr some problems with eprmissions to the data, unauthorized access. AWS IAM will helps in 
+   maintain these multiple logins and administartes it.
+   --IAM is global service
+   --create and manage IAM users and groups
+   --use permissions to define authorization
+   --no additional charge
+   Use cases:
+    access control: 
+      --Control accss to aws services and resources
+      --condition based controlling
+     Multifactor authentication:
+       --No extra cost
+       --Users should provide physical possession of MFA enablesmobile device and a hardware MFA token.
+     Analyze access
+       --Analyze access across your aws enivironment
+       --principle of leasr privilege
+     Integrate with corporate directory
+       --Federated access
+       --use SAML 2.0 or use one of AWS's federation samples
+       
+     There are three types of identities in IAM: users, groups and roles
+       --Users: represents person that uses IAM account
+                Grant permissions by adding an IAM account to a group. permission of an IAM user can be cloned to another user when nw user is addedd.
+       --Groups: Collection of IAM users is called groups
+                 Use groups to specify permissions for a collection of users, If you want to restrict some users for the specific tasks create a group with those 
+                 permissions and add the users to that group. Eg: If we want some users should have access to admin then create a group with admin permissions
+                 and add users to that admin group.
+       --Roles:  contains policies, but unlike users it does not need any credentials associated with it.
+   Introduction to amazon congnito:
+      Imagine you are playing a game in your mobile device and you made it to 50 level in that game and suddenly you switched to tablet device with same login credentials 
+      but you noticed that the game reset to 1st level. This is because the failure to integrate  accounts with multiple  devices. this needs a backend code to be 
+      developed by the creator additionally. Instead AWS amazon cognito helps in maintain this user data in multiple platforms withour losing any saved data.
+      You can login as a guest and startt doing your work later you can add your account and still it will be reflected in all of your devices.
+      You just ned to synch to amazon congnito.
+      
+    Introduction to Amazon SSO(single sign on):
+      If you have many users with diferent types of softwares and app login credentials.  All this data must be stored somewhere and have to maintain these login 
+      attempts separately which might take an extra cost, infrastructure and expertise. Amazon Single sigh on will helps in this sector to let users to access all
+       of their business accounts and softwares in one go after login into their respective aws sso portal.
+       
+===============================================================================================================================================================
+
+AWS- COMPUTE AND NETWROK SERVICES:
+
+RUNNING WORKLOADS ON EC2:
+   Amazon machine Image(AMI): When EC2 instance is launched, An AMI is the first thing that must  be selected, 
+      --It is a read only file systme
+      --It includes OS-Windows or linux or other softwares before launching an instance
+      --AMI ID is specific to a region.
+  *EC2 Instance types: 5 types
+     1)General purposes: Provides balance in between compute, memory and networking. eg: t2.micr0,m5.large etc...
+     2) compute optimized: The instances under this category requires high performance processors. Suited for workloads like batch processing, scientific modelling 
+        and compute intensive applications. eg: c6.large, c5.large etc..
+     3)memory optmized: These are instances deliver to provide fast performance like analytics and in-memory database. eg: r5.large, x1.16xlarge etcc 
+     4)accelerated computing instance: These type of instances provides hardware accelerations like GPU accelerated hardware. suitable for workloads 
+     such as deep learning, machine learning , high floating-point workloads and seismic analytics. eg: p3.2xlarge, p2.xlarge etc..
+     5)storage optimized: These type of instances are suited for workloads which require high sequential read and write access. such as NOSql database, 
+     data warehousing and high performance workloads. eg: i3.large, d2.xlarge etc...
+         With AWS EC2 we will get large variety of instances ranging from small type of configuration like 1vCPU 500MB to high configurations like 448 CPU 
+         cores with 28TB memory.
+   *AWS Instance Launch Types:
+     1) On-demand Instances: In this launch type instance, you will pay for duation you have used and there is no long term commitments. They are charged
+     for only "running" state instaces. suited for short term and irregular workloads.
+     2)reserved Instances: These are meant for the predictable and long running workloads which can run more than an year. commitment term- 1 or 3yrs. 
+     Upto 72% discount as compared to on-demand launch instance. Three types of payments is possible: No-upfront, partial upfront and all upfront.
+       reserved instances has three types again: 
+       standard RIs: suited for steady state usage
+       Convertible RIs: ability to change instance family/attributes
+       Schedules RIs: launch instances in a specific time frame
+     3) Spot instances:  In this aws allows unused EC2 instances in an availabilty zone, to be purchased at a price much lower than the on-demand pricing. 
+         you can get discount upto 90% as compared to on-demand pricing. Spot instances are meant for various workloads which are stateless, fault tolerant,
+         test and development workloads and workloads which are resistance to interuptions.
+    * EC2 Instance Tenancy: Based on the tenancy of the underlying hardware where the EC2 instances will be launched, there are 3 different launch types
+        1) Shared Tenancy: This is the default tenancy. The underlying physical hardware of the EC2 instances is shared with other AWS customers, but 
+            all the instances will run in isolation without any collision. this is budget friendly option.
+        2) Dedicated Hosts: Entire physical server dedicated to an aws user, you will get an entire physical server for use to launch EC2 instances.
+            Full control over instance placement. full visibilty into the ssockets and physical cores. It is expensive but useful for the companies which 
+            follows strict regulatories about their product. It is suited for scenarios when software pr applications running have a complex licensing model
+            Like: BOYL(bring your own license.
+        3) Dedicated instances: Entire physical server dedicated to an aws user. The underlying physical server is not shared with other aws users but may be
+            shared with instances in the same aws account. No visibility over the sockets or physical cores.
+    * EC2 Instance Storage:  
+       EBS Volumes: EBS volumes provide persistent and durable block level storage for the EC2 instances. Instance storage dependent on instance type and family.
+       Instance store volumes: It proviedes temporary block level storage for the instances. Data is lost when the instance is stopped and then started or if 
+       it is terminated. Instance storage is dependatn on instance type and family.
+   * EC2 Placement groups: By default instances spread across underlying hardware in an AZ.
+       --Reduces risk of correlated failure
+       -- Custom placement groups can be created based on workload requirements.
+       Based on stratagy there are of three types:
+        1)Cluster placement strategy: It allows instances to be tightly grouped in an availability zone.
+             This enables workloads to achieve low-latency network performance.
+        2) Partition strategy: It allows to spread instances acorss logical paritions such that group of instances in one partition do not share the underlying 
+              hardware with other groups. This is suited for distributed and replicated workloads such as hadoop, kafka etc..
+        3) spread strategy: It strictly places a groupof instances acorss distinct underlying hardware to reduce correlated failures.
+    * EC2 security groups:
+         when EC2 instances are launched in an availability zone, a virtual firwall called security group, and the loads the instance which controls the inbound
+         and the outbound traffic of the EC2 instance using inbound and outbound rules.
+         --It is an entity which exist independently from the EC2 host and it is a part of AWS VPC infrastructure. Some key points are
+           -In security group the inbound rules control the traffic incoming to the instances and the outbound rules control the traffic outgoing from the instance.
+           - One instance can be associated with multiple SGs.
+           -If the security group is not specified the instance is launched with default SG.
+           -SG rules can be modified at anytime, after instance launch as well.
+     
+  IMPLEMENTING AUTO SCALING USING EC2:
+     During the festive season, there is huge traffic to so many websites and applications to maintain crashes. Manually increasing the workload on the servers and 
+     scaling them according to the needs is challenging. So AWS ASG(Auto scaling groups) wil offer auto scaling wheneevr necessary.
+     Auto scaling ensures:
+      --High availability
+      --Improve fault tolerance
+      --lower costs
+    *EC2 Auto-Scaling Groups - Working Concepts:
+    what is auto scaling groups: auto scaling groups are a logical collection of related EC2 instances.
+    --minimum size of auto scaling group ensures that the number of EC2 instances in the group never goes below
+    that size.
+    --Desired capacity of the group can be set, to ensure that the auto scaling group has that many instances at a given point of time.
+    --maximum size of the auto scaling group, controls the maximum number of EC2 instances to which the group can scale.
+    *Auto scaling benefits:
+      --Improved fault tolerance: In EC2 instance, if auto scaling detects unhealthy instance, then it terminates and launches a new one to replace it. In multi -AZ 
+      deployment scenario, in case of the failure of an AZ, the scaling can launch instances in another available EC to compensate
+      --Higher availablility: EC2 auto scaling always ensures that your application has the right amount of capacity to handle the oncoming traffic demands.
+        scale based on traffic.
+      --Improved cost management: With auto scaling you dont need to provision capacity before hand, you scale in and scale out based on the requirement, and you pay
+      for the capacity you use.
+    *Launch configuration: A launch configuration is a set of configuration settings for an instance which the auto scaling group uses to launch EC2 instances
+      --In a launch configuration you need to specify information and settings required for launching the instance which include 
+         -Amazon machine image(AMI) ID,
+         - Instance type
+         -Key-pair
+         -Security groups
+         -Block device mappings
+         -EC2 user data if any
+         -Other instance configuration parameter's.
+       So launch confirguration acts as the pre defined instances launch setting using which auto scaling groups can launch instances automatically based on scaling policies.
+       Launch configurations cannot be modifies after the creation and only one launch configuration can be specified for an auto scaling group.
+       You can use a launch template for an auto scaling groups as well.
+       -- A launch template and launch configuration are similar, as it also specifies configuration information required to launch instances by an auto scaling group.
+      Types of scaling:
+       1) Manual scaling: As the name suggests you can change the size of an auto scaling group manually either by adjusting the desired capacity or by updating
+         instances attached to the auto scaling group.
+       2) Dynamic scaling: You can define how to scale the instance capacity in the group in response to changing the demand. you specify scaling policies to scale your 
+         auto scaling group in response to demand. 
+         example: Scaling policy can be set which automatically scales the instance in the auto scaling group if the average CPU utilization of the instance go beyond
+         60%.
+       3) Scheduled scaling: You can specify your own scaling schedule. scaling actions for the auto scaling group are automatically performed as a function of time
+           and date. Ex: If your application has a predictable traffic increase on a specific day of week, you cna choose to scale out on that specific date and time 
+           and then scal eback in after the schedule.
+          So, based on your requirement or workload patterns you can choose to perform either, manual scaling or dynamic or scheduled scaling.
+          
+   MANAGING APPLICATOINS TRAFFIC USING AWS LOADBALANCER:
+        **Introduction to AWS Elastix Load Balancing(ELB):
+          After implementing auto scaling for the EC2 instances, the solutions architect were facing a new challenge. For example, due to increases in the traffic
+          of an online fashion website, the average application hits to their online web store increase to 10000 hits per day. with such increase in traffic 
+          customers are facing generla slowness in the application, due tot this the number of EC2 instaces desired to maintain the application traffic had to be
+          increased substabially. Their in-house load balances are unable to scale to meet the growing application traffic. They require a solution from AWS which
+          will allow them to manage the huge network traffic between the EC2 instances and increase application responsiveness and can scale automatically based on
+          the application traffic. so for this scenario AWS offers elastic load balances service which can manage the application traffic between multitple EC2
+          instances and scale itself automatically to meet the growing netwrok traffic of the application.
+        --AWS Elastic Load Balancer: Elastic load balancer is a scalable solution from AWS which can automatically distribute traffic across multiple targets, 
+        such as EC2 instances, containers and lambda fucntions. ELB can handle the varying traffic load of your application either in a single availabilty zone or
+        across multiple availability zones in a region. ELB offers features such as high availability, automatic scaling and ronust security measures to make 
+        applications fault tolerant. features and benefits of elastci load balancer
+        -- High availabiltiy, it can automatically distribute traffic across multiple targets or a group of EC2 instances, spread acorss multiple avaialbility zones
+        in a region to make your application highly available to end users.
+        -Health checks: ELB offers health checks: It can detect unhealthy targets, and stops sending traffic to the, for consistent user experience. It offers 
+        security, as ELB can reside within a VPC and traffic can be controlled using a security group. It provides the feature of integrated certificate 
+        management. 
+        --SSL/TLS termination: Load balancing can be done either at layer seven or at the application level or at layer 4 for TCP and UDP traffic or at layer of the
+        OSI network model. Performance metrics and monitoring can be easily achieved as it is integrated with amazon cloud watch. 
+     ** Elasctic Load balancer- Key concepts:
+         --Working of elastic load balancer: The load balancer is configured to accept incoming requests by configuring a listener.
+         --A listener is the process which keep on checking for incoming connection requests and is configuered with a protocol and port number for connection from
+         clients. requests from the listener are forwarded to the resources under the registered targets of the load balancer. The registered targets can be EC2
+         instances in single or multiple availability zones, containers, IP addresses or lambda functions. AWS provides 3 types of elastic load balancer:
+         1) Application load balancer: It is a layer seven load balancer and is suited for web applications with http and https traffic.
+           --It operated at the application layer or the 7th layer of the open systems interconnect(OSI) model. It supports Http type of traffic and is suited for
+           web application workloads or containerized workloads. its features include, Path based routing, host based routing, native http/2 support, user authenticaton etcc.
+         2) Network Load balancer: It is a layer four load balancer and is used for providing ultra high performance for TCP and UDP traffic.
+           --It operates at layer four of the open systems interconnect(OSI) model. It supports various TCP, TLS and UDP traffic. It can handle millions of 
+           requests per second, provides ultra low latency and is suited for workloads which require very high network performance. 
+         3) Gateway Load Balancer: It is a layer three load balancer. which listens for a IP packets. Classic load balancer is a previuos load balancer for http,
+             https and TCP traffic.
+             -- It operates at the layer three of the open system interconnect(OSI) model. 
+             --This type of load balancer listens for packets across all ports and forwards it to the target that specified in the rule of the listener. This 
+             load balancer exchanges application traffic using the GENEVE protocol on port 6081. 
+             --It allows you to deploy, scale and manage virtual applicances such as firewalls, intrusion detection and prevention systems. 
+         4) Classic load balancer is a previous generation load balancer for http, https and TCP traffic. Application, network and gateway load balancers are 
+         newer generations of load balancers offered by AWS and classic load balancer is a previuos generation load balancer. AWS recommends the usage of the 
+         newer generation of load balancers. 
+         benefits of migrating from classic load balancer:
+           --ALB supports various traffic routing policies.
+           --ALB supports redirecting of requests from URL's
+           --NLB can scale to millions of requests per second.
+           --NLB supports assigning of static IP address.
+     DEPLOYING WEB APPLICATIONS USING ELASTIC BEAN STALK:
+        why do we need elastic beanstalk requirement? due to great global success of the websites, they need to keep designing their web site frequently to 
+        handle the bugs and give new features to the customers. Challenges like continous designing and development, and reducing management and time
+        to market. They needed a platform that can help them to develop and deploy features to their web application in the least possible time.
+     So here comes elastci beanstalk which is a platform as a service(PaaS) to improve team productivity by allowing developers to easily develop and deploy
+     fearures to their web application.
+     Elastic beanstalk: It is solution which allows for deploying and scaling web application and services written using java, .Net, PHP, etc.. on popular
+     servers such as apache, Ngnix, IIS etc..With AWS elastic beanstalk developers can easily upload their application code and service automatically takescare 
+     other aspects such as resource provisioning, load balancing,auto scaling and monitoring. 
+     Elastic beanstalk features and benefits:
+      --Developer productivity- Since beenstalk operates, provisions and manages the infrastructure and the application stack, it frees the developer from having
+      to worry about managing and configuring servers, databases, load balancers, networks etcc.
+      --Complete resource control: Users have the freedom to choose and select the aws resources such as EC2 instance typ, and allows to explore under the box
+      and retain full control over the aws resources powering the application of the user. 
+      Monitoring: Elastic beanstalk provides a unified interface for monitoring application health, along with logging and tracing.
+      --Scaling: elasctic beanstalk leverages auto scaling and load balancers to automatically scale your application based on the applications need.
+      --Deployment options: With beanstalk to deploy your applications you can choose from mulitple deployment policies such as- All at once, rolling and blue/
+      green.
+      --Complaince: Elastic beanstalk is compliant with various international standards such as ISO, PCI, HIPAA eligility etccc. making it suitable for 
+      various types of compliant related workloads and applications. 
+   ** Working with elastic  beanstalk is a compute service offered by AWS under platform as a service(PaaS) model.
+      --Its supports applications developed on Go, Java, .Net,  node js, php, python and ruby.
+      The following workflow illustrates the working of the elastic beanstalk:
+      1) create the application
+      2) upload a version of the applicaition in the form of an application bundle, for eg a WAR file in the case of a java application.
+      3) after that elastcic beanstalk automatically launches the environment such as amazon EC2 resources, auto scaling groups, load balancers etccc. to run the
+      uploaded application.
+      4) once the application is delployed succefully, it can be easily managed by a unified console, and updates to a version and new revisions can be deployed
+      seamlessly.
+   ** Elastic beanstalk concepts:
+     -- Application : It is defined as a logical collection- of other beanstalk components include, environments, versions and environment configurations.
+       Conceptually and application in beanstalk is a folder. 
+     -- Application version: Applications version in beanstalk is the name suggests point to an iteration of deployment code for
+       web application. The application version are kept in a S3 bucket created by beanstalk, The bucket contains the deployable code such as JAVA WAR file etc
+     --Environment:  Environment in beanstalk is the collection of AWS resources which beanstalk provisions to run your application version.resources include
+         EC2  instances, auto scaling groups etcc.
+     -- Environment tier: While launching an application on beanstalk an environment tier needs to be specified which which determines the type of AWS resources
+         to be provisioned. two types: Web environment tier HTTP(S) applicaitons. worker environment tier - backend applications.
+     --Environment configuration: It allows you to specify a collection of parameters and settings,- which defines how the provisioned environement is created
+        and behaves. configuration settings include - EC2 instance, networking, storage etc..
+     --saved configuration : Elastic beanstalk allows you to save environment configuration in the form of a template, it is refered to as configuration templates.
+        this saved configuration can be applied to any existing environment to update its configuration. 
+    --Platform: platforms in the elastic beanstalk is the entire collection of operating system, programming language runtime web and application servers.
+      Beanstalk offers a variety of platforms for various application types.
+          
+          
+INTRODUCTION TO SERVERLESS COMPUTE - AWS LAMBDA:
+   AWS lambda is a serverless compute service offered by AWS. Lambda provides the featured a virtually run your code for any type of application or back in 
+   service with zero administration. 
+   -- AWS Lambda allows users to perform serverless computing where your application run on servers completely managed by AWS. So this allows you to run your
+   application code without thinking about servers. AWS lambda is an event triggered function as a service which can run your application based on events from
+   other aws services or from mobile and web applications
+** Features and benefits of AWS Lambda:
+  --aws lambda allows you to build custom backend services that are triggered based.
+  --aws lambda supports almost all programming languages and libraries so you can easily bring your own code to lambda. 
+  --aws lambda has built in fault tolerance abd again automatically scale to handle a huge number of requests within milliseconds of receiving it.
+  --with aws lambda, you can package and deploy functions as container images.
+** Use cases of AWS Lambda:
+  --aws lambda can be used for data in real time file processing by running code in repsonse to changing data and files in aws services such as dynamo db, s3,efs etcc.etc
+  --aws lambda can also be used to provide rich user experince for web and mobile applications by utilizing lambda for consistent performance.
+
+Other AWS Compute Services:
+  1) AWS Batch
+      As a fully managed service, Batch would assist you to run batch computinG workloads of any scale.
+     AWS Batch removes the undifferentiated heavy lifting of configuring and managing the required infrastructure, similar to traditional batch computing software.
+     Components of AWS Batch
+       --Job:A unit of work that you submit to AWS Batch.
+        --Job Definition:
+           • A job definition specifies how jobs should be ruN
+         • It acts as a resource blueprint in your job.
+       --Job Queue:
+          • A job submitted to a job queue, resides until it is scheduled onto a compute environment.
+       --Compute Environment:
+           • A set of managed or unmanaged compute resources that are used to run jobs.
+    **AWS Batch is optimized for batch computing and applications that scale through the execution of multiple jobs in parallel.
+       Some of its use cases are -
+         --Deep learning,
+         --genomic analysis,
+         --financial risk models,
+         --Monte Carlo simulations,
+         --animation rendering,
+         --media transcoding,
+         --image processing,
+        --and engineering simulations are all excellent examples of batch computing applications.
+   2) AWS Light sail:
+       AWS LightSail
+         • Ideal for simpler workloads, quick deployments and getting started on AWS.
+         • Designed to start small, and scale as you grow.
+         • LightSail includes everything you need to launch your project quickly on a predictable
+            price
+         • LightSail offers a range of operating system and application templates
+         • Use cases such as web servers, developer environments, and small database
+         • Ideal for simpler workloads, quick deployments and
+           getting started on AWS.
+         • Designed to start small, and scale as you grow.
+         
+   3) AWS Outposts:
+     AWS Outposts offers IT as a Service
+     AWS Outposts is a fully managed service that offers truly consistent hybrid experience with the same AWS infrastructure, services, APIs, SDK tools
+     Making it Deployable in virtually any data center or co-located space
+     AWS Outposts supports Compute, Storage, database and other Cloud Services to run locally.
+      Outposts is ideal for workloads that require low latency access to on-premises systems
+    AWS Outposts is available in 2 options –
+      --First is Native AWS, in which you can use the same APIs, and the service features as that of AWS Cloud.
+      --Second is VMware cloud on AWS, which allows to develop and migrate VMware environment to the AWS Cloud.
+  4) AWS Wavelenght:
+     AWS Wavelength is an AWS Infrastructure which offers optimized mobile edge computing applications.
+     AWS Wavelength extends the AWS cloud to a global network of 5G edge locations.
+     It allows you to build applications that require ultra-low latency.
+     Services supported in Wavelength are a part of AWS VPC Infrastructure.
+     Wavelength zones are currently supported in the US, Japan, South Korea and European regions.
+
+SECURING RESOURCES AWS CLOUD USING AMAZON VPC:
+  Why do we need it? As Trends Fashion Online has migrated their applications to infrastructure on the AWS cloud, the solutions architect in the team requires
+  a solution which can allow them to manage the network of their applications on the AWS Cloud. AWS provides VPC or Virtual Private Cloud service, 
+  which can allow to create and customize your own network on the AWS cloud, to improve security for the deployed applications and resources.
+ ** What is Amazon VPC?
+   VPC or Virtual Private Cloud is one of the foundational services offered by AWS. It allows you to launch AWS resources in a logically isolated network
+   which you can define and control. This virtual networking environment gives you full control and allows you to choose your own IP Address range, Subnets,
+   Route Table configuration, Network gateways and much more.
+   Benefits of Amazon VPC:
+     Using Amazon VPC, you can create secure and monitored network connections. It provides features that allow to perform inbound and outbound filtering at
+     the subnet and instance level. It also provides monitoring features to screen network traffic. Amazon VPC is easy to use and simple to set-up. It decreases
+     the time to setup, manage and validate a network configuration. Amazon VPC is highly customizable, as it allows to create and manage your own subnets, and 
+     the entire network can be configured tailored to the workload's requirement.
+  **Overview of Virtual Private Cloud(VPC):
+    --A VPC is a private network in the AWS cloud, which is a regional resource. So, the scope of a VPC is within the AWS region in which it was created. 
+    --VPC’s are associated with a Private CIDR range of either an IPv4 address or IPv6.
+    --VPC’s are divided into sub-networks or subnets, which spans across an Availability Zone in the region.
+    --Each subnet has its own CIDR IP range which is a subset of the VPC CIDR range. Instances are launched into any one of the subnets and are allocated 
+      a Private within the IP range of the subnet.
+    --VPC’s have a router and a route table attached to the subnets, which allows to control the flow of traffic based on the routing rules defined. Since 
+      VPC’s are private networks, to enable access to the Internet, an Internet Gateway is attached to the VPC.
+    --VPC’s have Network Access Control Lists or NACLs at the subnet level to control the Inbound and Outbound traffic to them.
+ **Amazon VPC - Overview:
+    1. Subnets which span across an availability zone.
+    2. Routers and Route Table which control the traffic routes within the VPC.
+    3. Internet Gateway, which is responsible for providing Internet access within the VPC.
+    4. Network Access Control or NACL’s which controls the inbound and outbound traffic entering the VPC Subnets.
+ **AWS Default VPC - Overview:
+    --Every account in AWS, is provided with a default VPC in every region. This VPC has a private IPv4 CIDR block of 172.31.0.0/16, which provides up-to 65,536
+      private IP addresses for resources inside this VPC.
+    --The default VPC has subnets in all the Availability Zones in the region, and the subnets have an IP range of /20, which is a subset of the VPC IP range.
+    --The default VPC is attached with an Internet Gateway, to provide Internet Access
+      within the VPC.
+    --All the default Subnets in the VPC are Public Subnets, as in the route table attached to them, they have a route to the Internet Gateway, which provides
+      Public Internet access for resources within the default subnet.
+    --Default subnets are associated with a default Network ACL, which allows all Inbound and Outbound traffic.
+    --Instances Launched in the Default Subnets, have both a Private IP and a Public IP assigned to them.
+    --A default Security Group is also provided, which can be used to launch the Instances. The default VPC is provided to allow users to get easily started 
+    with the AWS console and its services.
+  **VPC – Route Tables and Internet Gateways:
+     When a VPC is created, a Route Table called as the Main Route Table gets created along with it.All the Subnets in a VPC are implicitly associated with 
+     this Main Route Table. The Route table comprises of a set of rules, called as routes that determine the flow of network traffic from your subnet. It is
+     controlled by an Implicit VPC router. Custom Route Tables can also be created, and it can be associated with a subnet of choice. One Subnet can be 
+     associated with only a single Route Table.
+   --A Route Table, comprises a set of rules called as routes. Every Route in the table has a destination and a target.
+   --The Destination is a CIDR range of IP address, which specifies where you want the traffic to go.
+   --Target specifies, either a gateway, a network interface, or connection through which to send the destination traffic, example an Internet Gateway.
+   --For communication within the VPC a Local Route is added in the table by default as shown.
+   --Destination for this local route is the CIDR range of the VPC. Target is local. This route ensures that traffic which wants to reach a destination within
+     the VPC is routed locally and kept within the VPC.
+   --Subnets associated with this Route Table, will allow EC2 instances launched within them to communicate with each other because of this local route.
+   --To provide public Internet access to the VPC subnets via the Internet Gateway a route with Destination as 0.0.0.0/0 is added, and the target is the 
+     Internet Gateway a shown.
+ **Internet Gateways(IGW):
+   --Internet Gateway is a VPC Component which is highly available, redundant and horizontally scalable.
+   --It allows communication between the VPC and the internet.
+   --It provides a target which can be added in the VPC route table for enabling internet- routable-traffic.
+     It also performs network address translation for instances that have Public IPv4 addresses.
+   --It supports both IPv4 and IPv6 traffic, and it does not cause availability risks or bandwidth constraints on the network.
+   
+**VPC and Subnets:
+   --A VPC is a logically Isolated virtual private network, which is dedicated to a single AWS Account. It is used to launch AWS resources such as EC2 Instances,
+     RDS databases, etc.,
+   --A VPC is a regional resource, so the scope of a VPC is within the AWS Region in which it was created. When a VPC is created, an IPv4 address range must be
+     specified in the form of a CIDR block. The VPC sizing for IPv4 must be /16 or smaller. As per AWS documentation it is recommended to specify a CIDR block 
+     from the Private IPv4 address ranges as specified in RFC 1918.
+   --You can additionally choose to specify an IPv6 CIDR block for the VPC. Resource created within the VPC, will be assigned a Private IP within the range 
+     specified during VPC creation.
+**VPC Subnets:
+  When a VPC with an IPv4 CIDR block say 192.168.0.0/16 is created in an AWS region, it spans across all the availability zones in the Region. After creating
+  the VPC, Subnets are to be created. One or more subnets can be created for each Availability Zone.
+  CIDR blocks must be specified for each Subnet, which is a subset of the VPC CIDR block.
+  Each subnet created, can reside only in a single Availability Zone and cannot span across zones.
+  Resources such as EC2 instances and RDS databases are created in the subnet or AZ of choice, and are assigned a Private IP from the subnet CIDR block
+**Types of Subnets:
+  1) Public Subnet: If a subnet is associated with a route table that has a route to the internet via the Internet Gateway, then the subnet is known as a 
+    Public Subnet.
+     --If a VPC with an Internet Gateway attached to it, has a subnet which is associated with a Route Table either a custom route Table or the Main Route 
+       Table, and if there is a route which directs traffic to the Internet Gateway to enable Internet accessibility within the subnet, then the subnet is
+       called a Public subnet.
+     --AWS resources such as EC2 Instances in a Public subnet, will be able to communicate with the internet over IPv4 if they have a Public IPv4 or an Elastic
+       IP Address assigned to them.
+       
+  2) Private Subnet: Opposite to Public Subnets, Private subnets are those subnets which do not have a route to the Internet Gateway. Even if a VPC has an 
+      --Internet Gateway attached to it, if a subnet in that VPC is associated with a Route Table either a custom route Table or the Main Route Table, and there 
+      is no route which directs traffic to the Internet Gateway, then the subnet becomesa Private Subnet. 
+      --A single VPC can have both Public and Private Subnets, by associating them with different route tables with the appropriate routes.
+**VPC – Network ACLs and Security Groups:
+   **Security Groups:
+       --Security Groups act like a virtual firewall for the EC2 Instances. When an EC2 Instance is launched within a subnet in a VPC, it is associated with a
+       --Security Group which is a virtual firewall.
+       --Security Groups, control the Inbound and Outbound traffic to and from the Instance.
+       --Security Groups, support only Allow rules, not deny rules.
+       --Security Groups are stateful, which means if a request is sent from an instance outbound, then the response traffic is allowed to flow back in regardless
+         of the inbound rules. One Security Group can be attached to multiple Instances.
+       --Security Groups are components of VPC, and they are specific to the VPC in which it was created.
+       By default, in a security group all Inbound traffic are blocked, and all outbound traffic is allowed.
+       --The Inbound Rules are specified in a tabular format as shown. Type specifies, the type of traffic whether SSH, HTTP or any other which is to be allowed.
+       --Protocol is used to specify whether the Inbound traffic is of type TCP or UDP.
+       --In Port range you specify the ports to which the traffic will be allowed.
+       --In source, you specify the origin from where requests will be allowed to enter. An Example Inbound Rule is shown, this rule allows SSH TCP traffic on 
+         Port 22, from a system with the IP address as shown. This rule will only allow systems with the IP specified to connect to the Instance via SSH as shown.
+       --Another example Rule which allows HTTP traffic from source 0.0.0.0/0 (anywhere) to enter the instance Out bound Rules are also specified in a similar way,
+         with the only exception that
+       --Instead of source, destination is to be mentioned. The given outbound rule, allows All Outbound traffic originating from the instance
+   **Network Access Control Lists (NACLs):
+     --Network Access Control Lists or (NACLs) are optional security layer for the VPC, using which the I nbound and outbound traffic of subnets can be controlled.
+     --When a VPC is created, a NACL is created along with it called as the default NACL. All subnets w ithin the VPC are implicitly associated w ith this default
+       NACL, unless explicitly associated with any other.
+     --The default NACL, allow s all I nbound and Outbound traffic to and from the subnet. One subnet can be associated w ith only one NACL, but one NACL can be 
+        associated with multiple subnets.
+     --NACLs support both allow and deny rules.
+     --NACLs are stateless, w hich implies, that response to allow ed inbound traffic is dependent on rules defined outbound and v ice-versa. It signifies that 
+       responses to inbound and outbound traffic must be explicitly allowed.
+    *Network Access Control Lists (NACLs):
+       --NACL comprises of the following parts. Every NACL Rule has a number associated w ith it. NACL’s rules are ev aluated based on the rule number assigned 
+         to them, starting with the lowest rule number. Rules with lower number are applied, regardless of any other rule w ith a higher number contradicting it.
+       --Type specifies the type of traffic to be allowed or denied, example SSH or HTTP.
+       --Protocol allow s to specify any protocol that has a standard protocol number.
+       --Port range specifies the ports through w hich traffic w ill be allow ed or denied.
+       --Source specifies the origin of the traffic and the destination specifies the destination for the traffic, for inbound and outbound rules respectiv ely. 
+         They hav e to be in the form of CI DR ranges.
+       --Allow or Deny, allow s you to explicitly allow or deny the traffic rule specified.
+    **NACLs and SGs Comparison:
+      Now let us look at the comparison between NACLs and Security Groups.
+      --NACLs are resources applied at the subnet lev el, whereas security groups are applied at the instance lev el.
+      --NACLs supports both Allow and Deny action for rules, whereas Security Groups support only Allow rules.
+      --NACLs are stateless, whereas Security Groups are stateful.
+      --NACL rules are ev aluated based on the rule number assigned to them, whereas in security groups, all rules are ev aluated to allow a traffic.
+      --NACLs are implicitly applied to all instances in the subnet in w hich they are associated, whereas Security Groups must be explicitly attached to an
+        Instance.
+    **VPC – NAT Gateway:
+       --NAT Gateways are VPC components which allow, instances in the private subnet to communicate to the internet or other AWS services, but prevent the 
+          internet from initiating an incoming connection with those instances.
+       --NAT Gateways are auto-scaled and support bandwidth from 5Gbps to 45Gbps.
+       --NAT Gateways support, TCP, UDP and ICMP protocols
+       --NAT Gateways are created in a public subnet.
+       --NAT Gateways have to be associated with an Elastic IP address.
+    **VPC Architecture with NAT Gateway:
+        Now let us look at the architecture of a VPC with a NAT Gateway. Consider a 2-tier architecture, in which Web Servers are running in a Public Subnet 
+        and Database servers are running in a Private Subnet in a VPC as shown. The traffic is controller by the cloud router in the VPC, and the VPC has 
+        an internet gateway attached to enable internet access in the VPC. The Public Subnet is associated with a route table, that has a route to the public 
+        internet via the Internet Gateway as shown. The Private Subnet is associate with a route table, that only has a local route. To enable outgoing only 
+        internet access a NAT gateway has to be created in the Public Subnet, and a route has to be added in the route table of the Private Subnet as shown.
+  MULTI REGION AVAILABILITY USING AMAZON ROUTE 53:
+    Why do we need route 53?
+    The business of the organization have grown and has shown a huge success due to the introduction of AWS services in their architecture, and their team is
+    looking to expand operations with a global out-reach. With this global setup they will be getting requests to their hosted web application, from users from
+    their respective regions. They require a highly-scalable DNS service which can route the requests coming from the user of a specific region to the appropriate 
+    end point based on different routing policies.
+   AWS Provides a highly available and scalable DNS web service which is Route 53 which can help to solve this business challenge.
+   Let us now explore what is Amazon Route 53 and its features and benefits:
+   Amazon Route53 is a highly scalable and available Domain Name system, domain name registration, and health-checking web service.
+   Route53 provides an extremely reliable and cost-effective means to route end users accessing Internet web applications by translating domain names to IP 
+   addresses.
+   Route53 also provides with DNS purchase and management settings for domain names by providing domain registrar services.
+  **Route53 – Features and Benefits:
+    With Amazon Route53 DNS Service you get –
+    • High Availability and Reliability as it is built using AWS’s highly available and reliable infrastructure, and the distributed nature of the DNS servers 
+       ensures the consistent ability to route end users to your application.
+    • Route53 is backed by a 100 percent SLA guarantee by AWS, which ensures that there is no downtime for the service in each billing month.
+    • Route53 is simple to use, as it provides a self-service sign-up and starts to answer queries within minutes of setup. It uses a global anycast network of
+      DNS servers, due to which it is fast and offers low query latency for end-users.
+    • It provides flexible routing policies for traffic based-on endpoint health, geographic location and latency.
+    • It is Integrated with AWS Identity and Access Management to provide unique fine- grained access control and security.
+    • Route53 is designed to work well with other AWS services such as Amazon EC2 Instances, Elastic Load Balancer, CloudFront Distributions and, etc.,
+ **Amazon Route53 Components and Record Types:
+  *Working of Route53 DNS:
+    Route53 is a managed DNS service provided by AWS. But what exactly does a DNS service do? Let us explore this with a scenario. Whenever a user types an URL
+    in the web browser for example say -> www.example.com, this request is forwarded to a Domain Name Server such as Route53.
+    The DNS Server maps the URL or the domain name to an IP address, this IP address is the address of the endpoint where the application is hosted and 
+    subsequently the request is forwarded to this endpoint so that end users can access the hosted application.
+  Route53 provides you with – 
+    --Domain Name Registration wherein you can choose to register your own custom domain name.
+    --It provides you with Domain Name Resolution where Public DNS records can be mapped to IP addresses.
+    --Route53 additionally provides health checks to monitor the health and performance of your application endpoints, web servers and other resources.
+    --It also provides you with robust routing policies to route the traffic to the appropriate end point.
+  **Route53 – DNS Service:
+   • With Route53 Domain Registration you can register a new domain like www.example.com.
+   • If you already have a registered domain name with another registrar, you can optionally choose to transfer it to Amazon Route53.
+   • It provides registration for a variety of generic top-level domains such as .com or.org.
+   • It also provides geographical top-level domains such as .in or .us
+ **Route53 – DNS Resolution:
+   • With Route53 DNS Resolution feature, it routes internet traffic to your web application endpoint.
+   • It translates and map domain name URL’s to numeric IP addresses of servers where the applications run.
+   • Every request to a domain URL managed by Route53 is forwarded to the nearest global network of Route53 DNS servers
+ **Route53 – Health Checks:
+   • Route53 provides health monitoring of web and application endpoint servers.
+   • Cloudwatch can be configured with Route53, to monitor and send notifications  when resources are unavailable.
+   • Using Route53 Health checks, you can easily perform a Disaster recovery failover to a standby region in case of a failure of the primary active region.
+ **Route53 – Common Record Types:
+   Route53 DNS service supports a lot of Record Types. The most common record types supported by Route53 are –
+   --A Record – Which maps a hostname or a domain name such as www.example.com to an IPv4 address.
+   --AAAA Record - Which maps a hostname or a domain name such as www.example.com to an IPv6 address.
+   --CNAME Record – Which maps one hostname to another hostname, example – demo.example.com to new.example.com
+   --Alias Record – Which is similar to CNAME record, and allows to map and route traffic from a hostname to an AWS resource such as a S3 bucket etc.,
+ **Amazon Route53 - Routing Policies:
+   Route53 provides various routing policies based on different conditions. Those policies are –
+     • Simple Routing: In Simple Routing, you typically route traffic request to a single resource, like a web server to an application webpage.
+       When a user, types in a hostname on a web browser, the request is forwarded to Route53, and Route53 checks its records and replies with the IP
+       address value associated with that hostname. This is simple policy for routing, and for every hostname one value is returned.
+      If multiple values are returned for a single hostname, then in simple routing, a random value is chosen by the web browser client.
+     • Failover Routing: In Failover routing policy, there is a primary server which serves the application, and a Secondary server which remains in standby 
+       in case of Disaster Recovery.
+       The Route53 service has health checks configured with the Primary Server. So when a web browser makes a DNS request to Route53, based on the health check,
+       if the primary server is healthy then the request is forwarded to the primary server, or if the health check fails indicating the failure of the primary 
+       server, then in failover routing policy, it can intelligently and automatically start routing requests to the Secondary server.
+       Point to note here, the Primary and Secondary servers, can be any endpoints or EC2 instances in different geographical regions as well
+     • Weighted Routing: In weighted routing policy, if there are multiple application endpoints mapped to a single domain name in Route53, then you can choose
+        to control the percentage of requests going to a specific application endpoint. In weighted routing policy, in case of multiple application servers, 
+        weights are assigned to them to control the percentage of traffic incoming. So in this case when DNS requests come to the Route53 server, then 50 percent 
+        of the traffic will be processed by Server 1, 30 percent by server 2 and 20 by server 3.
+       The servers can be in different regions and Health checks can also be configured in this routing policy.
+     • Latency Based Routing: Using Latency based routing you can improve the performance of your users by serving DNS requests to an AWS region which provides
+       lowest latency, if your application is hosted in multiple AWS regions.
+      To visualize this, consider two application server endpoints running in North Virginia and Ohio Regions, the respective latencies from different user 
+      regions are shown. So based on Latency Routing Policy, and the Latency calculations, user requests coming from California and Iowa to Route53 are routed to
+      the servers having the lowest latency for improved performance.
+     • Geolocation Based Routing:Next is Geolocation Based Routing Policy.
+      Using Geolocation based routing policy you can choose the resources that will serve your user traffic based on the geographic location of your users.
+      To visualize this, if you have 2 application servers' setup in say North Virginia and Mumbai for US and India based users respectively, then DNS requests 
+      originating from say Oregon in US and Chennai in India to Route53 will be routed the appropriate geolocation-based server.
+      Using this routing policy you can choose to route users to application website relevant to specific region, and show content relevant to the geographic 
+      location of the user.
+  **Other AWS snetwork services such as :
+    AWS Global Accelerator
+    AWS Transit Gateway
+    AWS Direct Connect
+    AWS VPN
+    AWS Cloud front
+    AWS App Mesh
+   Refer the lex course to know abiut them more.
+
+==================================================================================================================================================================
+AWS - STORAGE, DATABASE AND MIGRATION SERVICES:
+
+
+AWS Storage services and its types:
+File storage: File storage stores the data in a hierarchohcal methodology. Files are stores in the order of directory and sub directories in fole storage.
+It is scalable and less expensive but it becomes more complex in navigation when the size increases. This leads to slow access time.
+Block storage: Also called as block level storage where the data is stored in block level storage with unique identifiers. It is a consistent and reliable 
+way in storing the data but it is expensive and limited capability in metadata.
+Object storage: In object level storage the data is broken into discrete objects and is kept in single repository. This architecture gives the chance to store
+large and wide variety of data like emails, video, audio, web pages, textual and non textual files and images etc..
+
+File storage type: AWS EFS
+Block storage: AWS EBS.
+Object storage: AWS S3.
+ STORAGE SERVICES:-
+  **Amazon Simple Storage Service(S3):
+  All use cases of storage services:       
+    Use cases of S3:                                 Use cases of EFS |                                                               Use cases for Amazon FSx:                                                            Use case of S3 Glacier:                                                        Use case for EBS:                                      Use cases for AWS Storage Gateway:                                                                  
+| -Backup and restore                               -Containers and serverless persistent file storage |                             • High-performance file system, through Amazon FSx                                  --Media Asset workflows                                                         --NoSQL databases                                       --Move backups to the cloud 
+| -Disaster Recovery                                -Move to managed file systems |                                                  • Store a large volume of images and share project data across continents           --Healthcare Information Archiving                                              --Businesscontinuity                                    --Use on-premises file shares backed by cloud storage
+| -Archive                                          -Analytics & machine learning |                                                  • Spins up a virtual workstation quickly                                            --Regulatory and compliance Archiving                                            --Relational databases                                 --Low latency access for applications to cloud
+| -Data lakes and big data analytics                -Web serving & content management |                                              • Supports 4K displays on a per-GPU basis                                           --Scientific Data storage                                                        --Big data analytics engines                           --Data protection and disaster recovery 
+| -Hybrid cloud storage Application testing         -Media & entertainment |                                                         • Scales easily                                                                     --Digital Preservation                                                           --File systems & media workflows
+| & development   |                                                                                                                  • Achieved location independence                                                    --Magnetic Tape Replacement                                                      --Enterprise applications
+| -Cloud native applications                        -Database backups |
+|    |
+|  Features :                                               Features: |                                                                                                                                                 Features:
+| --Stored in buckets                                       --Auto scale to petabytes of data. |                                                                                                                        -Data retrieval Features
+| --Buckets - logical containers for storing data in S3      --Regional service |                                                                                                                                       -S3 Glacier Select
+| --99.999999999% of durability |                                                                                                                                                                                       -AWS Snowball & Direct Connect Integration
+| --Free tier – 5GB of standard storage class                --Data sharing between multiple EC2 instances |                                                                                                            -Vault Lock and access control
+                                                                                                                                                                                                                        -Integrated Life cycle management.
+     
+     Use case scenario:
+      NASDAQ: • A global technology company & Market technology provider
+       Challenges Faced:: Storing critical data safely, Following security standards and compliance
+      Use case of S3: Solution: Nasdaq decided to store its data in AWS Cloud(S3)
+       Benefits: Stores all kinds of data, Lifecycle policy, Reduced cost
+About S3:
+• Object storage service of AWS
+• Storage service to all kinds of data
+
+Scenario: Reliable and resilient object storage solution with ability to perform analytics and does not access frequently: AWS S3-> Amazon Athena
+Amazon athena is an interactice service to alalyze data from S3 easily.
+other use cases of S3: 
+1) backup and storage
+2) application hosting
+3) media hosting
+4) software delivery
+
+Storage types
+• Standard: A general purpose storage option for frequently access data.
+• Standard-IA: A general purpose storage option for less frequently access data which is long lived.
+• One Zone-IA: Less frequent access but provides fast access.
+• Intelligent Tiering: cost optimize storage solution where data is moved to automatically to more cost efficient access tier.
+• Glacier instant retrieval: Archival data that needs immediate access
+• Glacier Flexible retrieval: Rarely accessed long term data that does not require immediate access
+• Glacier Deep Archive: For long term archive and digital preservation with retrieval in hours at the lowest cost storage in the cloud.
+• Outposts: Deliver object storage to AWS outposts environment in on-premises 
+
+**Amazon Elastic File System
+Use cases of EFS:
+-Containers and serverless persistent file storage
+-Move to managed file systems
+-Analytics & machine learning
+-Web serving & content management
+-Application testing & development
+-Media & entertainment
+-Database backups
+
+
+DISCOVER  • Banking and credit products • Relies on data and analytics
+Challenges Faced:Storing analytics data from, different environments, Sharing the data among, data scientists.
+
+Solution: Discover decided to store its data in AWS Cloud(EFS)
+Benefits:Store analytics data, Share easily, Reduced cost.
+
+scenario: reliable and resilient file storage soluton: AWS EFS can be mounted on EC2 instances and as well as on-premises data cebters.
+On-premises instances --> Amazon EFS <-- Amazon Ec2 instances
+other use cases of EFS:
+1) best suited for file storage for big data workloads
+2) file storage for media processing workloads
+3) file storage for content management workloads.
+
+What is Amazon EFS?
+• Storage solution for File systems
+• Scalable and Elastic
+
+Features:
+--Auto scale to petabytes of data.
+--Regional service
+--High throughput and IOPS
+--Data sharing between multiple EC2 instances
+
+Storage classes
+*Standard storage class : Frequent access, pay for file storage/month
+*EFS IA (Infrequent Access) : Infrequent access, low cost
+
+**Amazon FSx:
+Use cases for Amazon FSx:
+HIVE: • Cloud-based VFX Studio • Specialized in 2D and compositing
+Challenges faced: Cloud Storage,Cloud Rendering & Virtual workstations.
+
+
+Solution:
+AWS FSx for Lustre and Amazon Simple Storage Service
+Benefits:
+Use cases for Amazon FSx:
+• High-performance file system, through Amazon FSx
+• Store a large volume of images and share project data across continents
+• Spins up a virtual workstation quickly
+• Supports 4K displays on a per-GPU basis
+• Scales easily
+• Achieved location independence
+
+Amazon FSx
+• Fully managed
+• Reliable file systems
+• Highly-performant
+Types:
+1) Amazon FSx for Windows File Server :
+Amazon FSx for Windows File Server
+• Fully managed, highly reliable, and scalable file storage
+• Accessible over SMB protocol.
+• Built on Windows Server
+Accessible from:
+Windows, Mac, Linux & On-premise
+
+When to use FSx for Windows File Server?
+*Microsoft SQL Server deployments
+*Home directories Lift-and-shift Windows applications
+*Media workflows
+*Web serving and content management
+*Data analytics
+
+2) Amazon FSx for Lustre:
+• Fully managed, cost-effective, high-performance storage
+sub-millisecond latencies, multiple deployment options and storage types, Linked to Amazon S3 buckets.
+
+When to use FSx for Lustre?
+*Electronic design automation
+*Media processing and transcoding
+*Machine learning High performance computing
+*Autonomous vehicles Big data and
+*financial analytics
+
+**Amazon S3 Glacier:
+Use case of S3 Glacier:
+--Media Asset workflows
+--Healthcare Information Archiving
+--Regulatory and compliance Archiving
+--Scientific Data storage
+--Digital Preservation
+--Magnetic Tape Replacement
+
+SONY DADC:Media supply chain • Provides OTT, media, and smart-toy solutions
+Challenegs Faced: Storing petabytes of data on-premise, Elasticity based on usage.
+
+Solution: Sony DADC decided to store its data on AWS Cloud( S3 Glacier)
+Benefits:Petabytes of data storage, Reduced cost, No infrastructure management.
+
+About S3 Glacier
+• Archival storage solution from AWS
+• Archives- Stored data
+• Capacity of single archive – 40 TB
+
+Features:
+-Data retrieval Features
+-S3 Glacier Select
+-AWS Snowball & Direct Connect Integration
+-Vault Lock and access control
+-Integrated Life cycle management
+
+Benefits of Amazon S3 Glacier :
+Benefits:
+-Faster Retrieval Durability and Scalability
+-Security and compliance
+-capability
+-Low Cost
+-Supported by partners,
+-vendors, AWS Services
+
+**Elastic Block Store (EBS):
+
+Use case for EBS:
+--NoSQL databases
+--Businesscontinuity
+--Relational databases
+--Big data analytics engines
+--File systems & media workflows
+--Enterprise applications
+
+INFOR:• Multi-national software company • 15,000 employees • Customers in more than 200 countries and territories
+Challenges Faced: Managing hardware, procurement & provisioning, Longer Backup times Maintaining high availability.
+
+Solution:
+Infor choose to move its customer facing application to AWS Cloud.
+
+scenario: reliable and storage solutoin for using software licenses: AWS EBS-> ebs can manage the existing software licenses from microsoft, oracle, sap etccc
+applications deployed in AWS-> AWS EC2<-- AWS License manager
+                                 |-> AWS EBS
+Other use cases of EBS:
+1) I/O intensive NOSQl and relational databases.
+2) boot volumes and low latency interactive apps
+3) big data, data warehouses and log processing.
+                                 
+Benefits:
+• Uses Amazon EC2 I2 instances with ephemeral storage.
+• Uses Amazon EBS st1 volumes for database-backup workload.
+• Faster backup
+• Improved live data backup recovery points in time
+• High-throughput
+• Saved 75% of the backup cost
+
+What is EBS?
+• Primary storage
+• Persistent Block storage • Attached only to one instance at a time
+• 1 GB to 16TB • Volumes can be backed-up as
+snapshots
+• 99.999% availability
+• 99.999% durability
+Amazon EBS
+• Supports data encryption
+
+
+*EBS Snapshot:
+Data is the most important thing anywhere over the internet. Everyone wants to be more secure and save when it comes to their Data security. 
+Data on your Amazon EBS volume can also be back up to Amazon S3 Bucket by taking the point-in-time Snapshot. Snapshots can be used to create 
+a backup of critical workloads, such as a large database or a file system that spans across multiple EBS volumes.
+
+EBS Snapshots are point-in-time image/copy of your EBS Volume. These are stored on S3 which can be accessed through EC2 APIs or AWS Console. 
+While EBS volumes are availability zone (AZ’s) specific but, Snapshots are Region-specific.  Your Snapshot size must be either same or larger 
+than the size of the original volume from which the snapshot is taken. As per the Amazon, each AWS account can have a maximum of up to 5000
+EBS Volumes and up to 10,000 EBS Snapshots created. Snapshot when created shows a ‘pending ‘status which then converts into ‘complete’ once
+the snapshot creation is successful.
+• Save point-in-time snapshots of your volumes to Amazon S3
+• Incremental backups of EBS volumes
+• New volumes and instances can be created from snapshots
+• Region Specific
+• Can be shared across AWS accounts
+EBS snapshot
+• Automates the creation, retention, and deletion of EBS snapshots
+• Automation is achieved by creating a lifecycle policy.
+An Amazon Machine Image is a special type of virtual appliance that is used to instantiate (create) a virtual machine within EC2. It serves as the 
+basic unit of deployment for services delivered using EC2. Whenever you want to launch an instance, you need to specify AMI. To launch instances, 
+you can also use different AMI’s. If you want to launch multiple instances from a single AMI,  then you need multiple instances of the same configuration.
+
+An AMI has the following properties:-
+
+A template for the root volume for the instance (for example, an operating system, an application server, and applications)    
+Launch permissions that control which AWS accounts can use the AMI to launch instances  
+A block device mapping that specifies the volumes to attach to the instance when it’s launched
+
+When you want to use AMI, select the following characteristics:-  
+-Regions
+-Permissions for launching AMI 
+-Operating System 
+-Root device Storage   
+-Architecture 
+Why do we need AMI ? 
+Let us suppose that we want to launch 5 servers with the same configuration. One way of doing that would be to launch a new EC2 instance every time and 
+install the required packages every time. While the other way of doing it would be to configure your EC2 instance once and then create an image of that 
+instance. Using that image you can deploy 4 more EC2 servers. 
+
+**AWS Storage Gateway:
+What is AWS Storage Gateway?
+Hybrid Cloud storage:
+• Move backups to the cloud
+• Use on-premises file share backed up by cloud storage
+• Low latency access to data in AWS
+On-premises access to virtually
+unlimited cloud storage
+
+Use cases for AWS Storage Gateway:
+--Move backups to the cloud 
+--Use on-premises file shares backed by cloud storage
+--Low latency access for applications to cloud
+--Data protection and disaster recovery
+
+Southern Oregon University:• Public liberal arts college • ~6,200 students • Campus in Ashland, Oregon
+Challenegs Faced: Physical tape backup, Management, Disaster recovery requirements.
+Solution:
+AWS Storage Gateway
+
+scenario: data needed for the on-premise applications is made available while storing the backup in AWS, resilient and reliable storage solution for integrating 
+on-premises with cloud environment: AWS storage gateway.
+similarly if  frequently accessed data has to be cached in on-premises environment and primary data has to be there in cloud environment then EBS is the best option
+Other use cases of EBS:
+1) move backup to the cloud while integrating with on-premises data centers.
+2) shifting on-premises storage to cloud backed-file share
+3) low latency  acecss to data in AWS for on-premises applications.
+
+Benefits:
+• Saved cost and time
+• long-term storage tier
+• Reduced DR risk
+• 30 TB per backup
+• 320TB on Glacier
+
+Benefits of AWS Storage Gateway?
+Simple,Cloud-integrated,Low latency, Durable and secure, Optimized transfers, Scalable.
+
+Gateway Types: 1)File Gateway 2)Tape Gateway 3)Volume Gateway.
+
+**AWS Backup:
+
+What is AWS Backup?
+Integrated Services:
+• Amazon EBS volumes
+• Amazon EC2 instances
+• Amazon RDS databases
+• Amazon DynamoDB tables
+• Amazon EFS file systems
+• AWS Storage Gateway volumes
+Automates backup Configure, monitor backup
+
+Use cases for AWS Backup
+--Cloud-native 
+--backup Hybrid backup
+
+Quionin.com is an online fashion store
+• Operates using multiple AWS accounts across multiple countries
+Challenegs Faced:
+Manual overhead in taking backups and Maintaining backups for multiple AWS accounts
+Solution: AWS Backup
+Benefits:
+• Centrally manage backups
+• Automate backup process
+• Zero set up charges
+
+Features of AWS Backup:
+-Policy-based backup solution
+-Tag-based backup policies
+-Automated retention management
+-Backup activity monitoring
+-Lifecycle management policies
+-Incremental backups
+-Backup data encryption
+-Backup access policies.
+------------------------------------
+Databse Services:
+
+**Relational Database Service:
+(RDS)
+
+What is RDS?
+• Relational Database
+• available on several database instance types
+• Easy to setup, operate and scale relational databases
+
+
+Amazon RDS
+• Preconfigured database environment
+
+Use case for RDS:
+--Web and mobileapplications
+--Mobile and online games
+--Ecommerce applications
+
+Example: Lamborgani: • Maker of luxury sports cars • Headquartered in Sant'Agata Bolognese, Italy • ~ €586 million revenue
+Challeneges Faced: Launched on an outdated infrastructure, High maintenance cost and infrastructure was not scalable, Longer down time during deployments
+Solution:
+Lamborghini chose Amazon RDS with MySQL, MS SQL server databases.
+Benefits:
+• The new website was available in less than a month
+• Supports peak traffic with a 250% burst for new product launch
+• Zero Time to Market
+• Infra cost reduced to 50%
+
+Features of RDS
+-Highly scalable
+-Enables bug fixing
+-Point-in-time recovery
+-Secure
+-Enable automatic backup of data
+-Inexpensive
+Supported DB Engines: 
+MYSql: Easy to setup, Open Source RDBMS, Uses SQL
+Oracle: Developed by Oracle, Focus on innovation and application development, Two License models
+Postgre SQL: Open Source, RDBMS Developed by world wide team of volunteers.
+Microsoft SQL server: RDBMS Developed by Microsoft, License Included, Suitable for simple to enterprise applications.
+Amazon Aurora: Community developed by MySQL, AWS Manages DB administration.
+Maria DB: Product of AWS, MySQL and PSQL compatible, Fully managed.
+
+
+**Amazon DynamoDB: 
+
+What’s DynamoDB?
+-Document and key-value DB
+-Single digit ms response time
+-Fully managed and serverless
+
+Use cases of DynamoDB: 
+Software and internet, Media and Entertainment, Banking and Finance, Retail, Gaming, Ad Tech.
+Example: The pokemon company: Widely popular Entertainment Brand • Offered games include Pokemon GO and Pokemon Trading card game
+Challenges faced: DB scalability and reliability and Infrastructure management.
+
+Solution: The Pokemon Company decided to store its data on AWS Cloud(DynamoDB)
+Benefits: Increase in capacity, Reduced cost, Zero down time, Use case of DynamoDB.
+
+Features
+-Multiregional NoSQl
+-Performance oriented
+-Global Table- Replicates data automatically
+-DynamoDB Accelerator – in memory cache
+-Capacity modes for read/write
+-Encryption and point in recovery
+
+Benefits: performance, Enterprise Ready, Serverless.
+
+**Amazon ElastiCache:
+
+What is Amazon ElastiCache?
+• Cache service and a fully managed in-memory data store
+• Improves the performance of applications
+• Easily set up, manage and scale cache environment in the cloud
+• Two memory cached engines
+1)Redis 2) Memcached
+
+Use cases for Amazon ElastiCache: Web, Mobile apps, IOT, Gaming.
+
+Use cases for Amazon ElastiCache Requirements:
+
+PlaceIQ company:  • Data and technology provider • Founded in 2010, headquartered at New York
+Requirements: process 10000 Giga bytes of data, highly scalable and efficient caching layer.
+Solution:
+Amazon ElastiCache
+Benefits:
+• quickly implement and deploy a caching layer
+• eliminates redundant copies of cached data
+• Saved $1,000 per month in direct costs
+• improved service response times.
+
+Benefits of Amazon ElastiCache
+-Extreme Performance
+-Fully Managed
+-Scalable.
+
+**Amazon Neptune:
+
+What is Amazon Neptune?
+• Fast, reliable graph database built for the cloud
+• high-performance graph database
+• stores billions of relationships
+Features:
+-Supports open graph APIs
+-Fully managed
+-Highly secure
+-High availability and durability
+-High performance and scalability
+
+Use cases for Amazon Neptune: Social Networking, Network / IT Operations, Recommendation Engines, Knowledge Graphs, Identity Graphs, Fraud Detection, Life Sciences.
+
+Audible company: • Seller and producer of audiobooks • ~525,000 audio programs • Subsidiary of Amazon
+Requirements: Scalable database.
+
+Solution:
+Amazon Neptune
+Benefits:
+• Flexible
+• Store billions of relationships
+• Query the graph with millisecond latency
+• Scalable
+• Handles 5K transactions per second
+• Security and compliance
+• Encryption
+
+**Amazon Redshift:
+
+
+What is Amazon Redshift?
+• Fully managed, petabyte-scale data warehouse
+• Cluster with collection of nodes
+• Each cluster contains one or more databases
+Leader Node
+Compute node 1 Compute node 2
+• Perform data analysis queries in the cluster
+
+Use cases for Amazon Redshift: Business intelligence, Operational analytics on business events.
+Docomo Company: • Mobile service provider in Japan • ~68 Million customers
+Challenegs Faced: Analyze TBs of data and Performance challenges.
+
+Solution:
+Amazon Redshift
+Benefits:
+• 125-8xl-node cluster
+• 4,500 virtual CPUs
+• 30 terabytes of RAM
+• Stores petabyte data
+• Scalable
+• Improved service response times.
+
+Features of Amazon Redshift
+-Scalable
+-Best performanceDeepest integration
+-Best value
+-Easy to manage 
+-Secure and compliant.
+
+**Amazon Quantum Ledger Database(QLDB):
+
+What’s Amazon QLDB?
+• Fully managed ledger database
+• Track and log application data changes
+
+Use cases of Amazon QLDB: Finance, Manufacturing, HR & Payroll, Retail and Supply chain.
+Accenture Company: • Global professional services company • Offers consulting, strategy, technology and operations, Complex blockchain operations.
+
+Solution: Accenture decided to move to AWS Cloud( Amazon QLDB)
+Benefits:
+-Scalable
+-Ease of management
+-Data integrity
+
+Features
+-Serverless
+-Immutable and Transparent
+-Cryptographically
+-Verifiable
+-Easy to use
+-Streaming Capability.
+
+**Amazon DocumentDB:
+
+What’s Amazon DocumentDB ?
+• Fully managed Database service
+• Supports MongoDB workloads
+• Document Database
+
+Use cases of DocumentDB: Content and catalogue management, Mobile and web applications, Profile management.
+
+Woot company: • Deals site that offers various deals • Events, daily and limited time offers
+Challenegs Faced: Cost of maintenance Database management, Use case of DocumentDB.
+
+Solution: Woot decided to migrated to Amazon DocumentDB
+Benefits: Reduced cost, No infrastructure management.
+Features:
+-MongoDB compatible
+-Fully Managed
+-Performance at scale
+-Highly secure and complaint
+-Highly available.
+
+Types of instances:
+Database I/O, Database Storage, Backup Storage, On-demand.
+
+-------------------------------------
+MIGRATION SERVICES:
+
+What’s migration? *Cloud native features *Reduced cost *Increased performance
+6R’s of Migration: -Rehosting -Replatforming -Repurchasing -Refactoring/Re-architecting -Retire -Retain
+
+5 Phases of migration
+1)Migration preparation and business planning
+2)Portfolio discovery and planning
+3)Designing, migrating and validating applications
+4)Modern Operating Model
+
+Migration tools of AWS:
+-AWS Migration Hub
+-AWS Application Discovery Service
+-AWS Database Migration Service
+-AWS Server Migration Service
+-CloudEndure Migration
+-VMware cloud on AWS
+-AWS DataSync
+-AWS Transfer for SFTP
+-AWS Snow Family
+
+**AWS Migration Hub                     **AWS Application Discovery Service             **AWS Database Migration Service    **AWS Server Migration Service                                                                                           
+• Single location to track progress     • Collects details of on-premise data center    • Database migration solution       • Agentless Migration service                
+• Metrics and tools                     • Exported through CSV                          • Homogenous                        • Migrate large no of workloads to AWS          
+• Improved visibility                   • Use to estimate TCO                           • Heterogenous                      • Reduces downtime                               
+                                                                                        • Replicates data continuously
+
+
+ **VMware on Cloud                      **CloudEndure Migration              **AWS Data Sync                                      **AWS Transfer for SFTP
+• vSphere workload solution              • Automated lift and shift          • Data transfer solution                             • File transfer solution
+• Faster, simple and cost effective      • Expedites rehosting               • Transfers to S3, EFS, FSx for Windows File Server  • Compatible with SFTP, FTP, FTPS
+• Modernize on the go                    • Agent based solution              • Handles tasks                                      • Serverless
+                                                                             • 10x faster
+
+**AWS Snow Family
+• Physical devices and capacity points to run operations in
+austere setup
+• Consists of Snowcone, Snowmobile, Snowball
+
+
+**AWS Migration Hub:
+What’s AWS Migration Hub?
+• Single location to track progress
+• Metrics and tools
+• Improved visibility
+
+AWS Migration Hub: -Import on-prem server details  -Simple dashboard  -Application migration tracking   -Multi region migrations
+
+**AWS Application Discovery Service:
+What is AWS Application Discovery Service?
+• Discover on-premises server inventory and behavior
+Integrated with:
+• AWS Migration hub
+• Can be analyzed using Amazon Athena and Amazon QuickSight
+
+Benefits: Reliable Discovery, Engage with, migration experts, Encryption.
+
+How to Discover data?
+• Agentless discovery Connector
+• Agent based discovery
+
+Feature Comparison:
+
+                                                 (Discovery connector)           (Discovery Agent)
+Server Types Supported                          *VMs only                         *Both physical and Virtual machines
+-Deployment                                     *Per vCenter(Not per VM)          *Per Server/VM
+-Collected data                                 *Static configuration data,       *VM utilization metrics, Timed performance metrics, Network In/Out connections
+                                                 VM utilization metrics 
+-Supported OS                                   *Any OS running on VMware VMs     *Windows and Linux
+
+**AWS Database Migration Service:
+
+Use case for Database Migration:
+-Homogeneous Database Migrations: migration will be where the source and target engines are same. Eg: Oracle to RDS oracle.
+-Heterogeneous Database Migrations: migration will be where the source and target engines are different. Eg: Oracel to PostGreSQL
+-Development and Test
+-Database Consolidation
+-Continuous Data Replication
+
+Use case for Database Migration: Samsung: • World’s largest manufacturer of electronics • Headquartered at Seoul, South Korea
+Challenges Faced:
+*Scalability *Expensive *Harder to update.
+Solution:
+Database Migration Service
+Benefits:
+• Scale up to 15 Aurora Replicas
+• Entire migration done in less than 18 months
+• 60ms latency
+• Reduction in database cost by 44%
+ 
+ What is DMS?
+• Continuous replication
+• migrate databases to AWS quickly
+and securely
+• Minimizes downtime
+Facilitates migrations of:
+• Relational Databases
+• Data Warehouses
+• NoSQL Databases
+• Other types of datastore
+
+Benefits of DMS? Simple, Minimal downtime ,Supports widely used databases, Low cost, Fast and easy to set-up, Reliable.
+
+Schema Conversion tool
+• Supported platform:
+• Microsoft Windows
+• Apple Mac
+• Fedora Linux
+• Ubuntu
+• Converts the source database schema to
+destination database schema
+• Used by Heterogeneous DB Migration
+• Scan the application code
+
+**AWS Server Migration Service:
+
+What is SMS?
+• Migrate your on-premises
+workloads to AWS
+• Automate, schedule and track replication
+• No additional fee to use the service
+• Orchestrate Multi-server migrations
+
+Benefits of SMS? Simple, Control, Agility, Cost-effective, Minimize downtime.
+
+**AWS Snow Family:
+
+Use case for AWS Snow Family:
+-Cloud Migration
+-Disaster Recovery
+-Data center Relocation
+-Remote data collection
+
+LOTTO: • E-commerce • ~60,000 employees • Headquartered at Republic of Korea
+Challenges Faced: Transfer 140 million files and Faster transfer
+Solution:
+AWS Snowball
+Benefits:
+• Timely transfer
+• Migration made easier
+
+What is AWS Snow Family?
+• Data keeps growing
+• Highly-secure and portable migration device
+
+Members of Snow Family
+Snow Family--> 1)Snowcone 2)Snowball 3)owmobile
+Integrated with:
+• AWS security
+• Monitoring
+• Storage management
+• Computing capabilities
+ 
+1)Snowcone                                                       2)S Snowball                                               3)Snowmobile
+• Collect, process, and move data to AWS                         • Petabyte-scale                                           • Exabyte-scale
+• available in the US East (N. Virginia), US West (Oregon),      • Edge computing, data migration, and edge storage device  • 45-foot long ruggedized shipping container
+and Europe (Ireland) Regions                                     • Encrypted                                                • Secure
+• Weighs 4.5 pounds                                              • Upto 100TB storage                                       • Encrypted
+• 8TB capacity                                                   Used: • Cloud migration,                                   • Upto 100PB storage
+• Portable, rugged, and secure                                         • Disaster recovery
+3 Workflows                                                            • Datacenter decommission
+• Snowcone edge computing                                              • Content distribution
+• Snowcone data transfer                                         Two device options
+• Snowcone edge storage                                             • The standard Snowball
+                                                                    • Snowball Edge
+
+ 
+                     1)AWS Snowcone                                  2)AWS Snowball Edge Storage        3)AWS Snowball Edge Compute               4)AWS Snowmobile
+                                                                     Optimized                          Optimized
+*Usage               -Edge computin,Data transfer, Edge storage       -Data transfer,Edge storage        -Edge computing, Data transfer           -Data transfer
+*Usable HDD          -8 TB                                            -80 TB                             -42 TB                                   -100 PB
+Storage 
+*Usable SSD          -No                                              -1 TB                              -7.68 TB                                 -No
+Storage 
+
+
+**AWS Transfer Family:
+
+Use cases of AWS Transfer Family
+-Internal and Third-partyfile share
+-Secure Data distribution
+-Ecosystem data lakes
+
+What’s AWS Migration Family?
+• File transfer solution
+• Compatible with SFTP, FTP, FTPS
+• Serverless
+
+Features: Fully managed, Elastic resources, Supported authentication methods, Automated file conversion into S3 objects, Simple user experience,
+Comprehensive AWS management service.
+
+Benefits
+-Serverless
+-Seamless migration
+-Work natives with AWS Services
+
+**AWS Data Sync:
+
+Use cases of AWS Data Sync:
+-Data migration
+-Data protection
+-Archiving of cold data
+-Data processing for hybrid clouds.
+
+Introduction to AWS Data Sync
+• Data transfer solution: its an easy way to migrate data from on premise data venters to AWS like S3.
+• Transfers to S3, EFS, FSx for Windows File Server
+• Handles tasks
+• 10x faster: It can transfer hundreds of storages of data in 10x speed.
+
+Benefits:
+-Reduce operational costs
+-Move data 10x faster
+-Automates transfers
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS CLOUD MANAGEMENT SYSTEM:
+
+**AWS Identity and access management(AWS IAM):
+
+Why IAM is required:
+Suppose in a project, A single AWS account should be shared and used by the members of the project. The AWS credentials will be shared to the project memebers so 
+that everyone can access the services offered by the AWS. But there are some limitations in this, where some users are not allowed to do some activities which may 
+causes disruption in the project deliveries. And also it is difficult to log what everyone is doing in the porject while using the services. So This is when IAM 
+comes into picture. It can able to manage single AWS account with different credentials given to the members of the project.
+
+AWS IAM:
+-- Global service
+--Create and manage IAM users and groups by providing different credentials and permissions to the users.
+--Use permissions to define authorization
+--No additional charge. however you will be charged by AWS services that are consumed by the IAM users.
+
+Use cases of IAM:
+-Access control:
+   - Control access to AWS services and resources: IAM admins can control thr admin based controls. We can also control which IP address can be accessed through 
+    the IAM users.
+   -Condition based controlling.
+-Multi-factor authentication:
+   -Users should prive physical possession of
+     *MFA-enabled mobile device.
+     *A hardware MFA token.
+  -No extra cost.
+-Analyze access:
+  -Analyze access across your AWS environment.
+  -principal of least privilege.
+-Integrate with corporate driectory:
+  -Federated access.
+  -Use SAML 2.0 or use one of AWS's federation samples.
+ 
+ Types of IAM identities:
+ 1) Users
+ 2) Groups
+ 3) Roles
+ 
+ 1) IAM Users:
+--Users represnt the people that uses IAM account which interacts with AWS services and tools
+--Grant permissions by adding an IAM account to a group or directly attached to him by a AWS IAM policy or custom policy.
+--Permission of an existing user can also be cloned so that the new user can have all the permission alloted to the existing user.
+2) IAM Groups:
+-- The collection of IAM users is called IAM groups.
+-- When you want to assign certain permission to all the memebers in your team, create a group with those specific
+permissions and add all the team members to that group.
+--When a new user is added to the group, he will inherit the permissions of that group.
+3)IAM Roles:
+--When you want an user to posses the temporary permissions and access to the aws services from the AWS account, you can create roles from IAM roles.
+--IAM roles are set of permissions which specify what a person or a service will do once a role is assumed.
+--contains policies, but unlike users it does not have any credentials associated with it.
+--Can be assumed by a federated user/IAM user/AWS service.
+
+**AWS CloudTrail:
+  
+Why cloudtrail is required: AWS cloudtrail captures all the actions done by the AWS services.
+Eg: An S3 bucket was created by alice is an event captures by the AWS coudtrail. And an EC2 instance uploaded an object into the bucket is also an 
+event captures by the cloudtrail.
+What is AWS cloudtrail:
+--AWS CloudTrail will be created by default when you create an AWS account.
+--If you want to see the event history, you can go to event history. In event history, the data of last 90 days will be available.
+--It captures command line interface(CLI), software development kits(SDK), AWS application programming interfaces(APIs) and AWS management console actions.
+--AWS cloudtrail logs will be sent to an already exsiting S3 bucket or creates a new bucket. It also sent to AWS cloudwatch to track logs.
+--All logs are encrypted and also you can use AWS KMS key for extra encryption.
+--Can able to send notification regarding the logs and trails using AWS SNS service.
+There are two trail types:
+1)Global Trail: This trail keeps track of all the events happening in all the regions across the globe and send to S3 bucket to store the data. this is default when you create 
+aws cloudtrail.
+2)Regional Trail: This Trail only tracks the events occured in the regional level. This is default type when we create cloudtrail for AWS CLI or AWS API.
+
+AWS CloudTrail use cases:
+-It is compliance to the company policies and regulatories.
+-Data exfiltration detection: You can collect the data regarding the activities of S3 buckets and AWS Lambda functions. this lets you detect the unauthorized access.
+-Secutiry analysis: you can use several security analytics to analyse the cloudtrail data.
+-troubleshoot operational issues.
+
+**AWS CloudWatch:
+Why we need AWS Cloudwatch:
+ Nowadays many companies are building servless applications and microservices architecture for seamless and serverless availbility. to run even better and 
+ gain more market gain, business success is application success. However monitoring these applications and huge amounts of data is very difficult. this is where 
+ AWS cloudwatch comes into play.
+ 
+ AWS cloudwatch:
+ --Its a observability and monitoring service. built for developers, site reliability engineers, IT managers and Devops engineers.
+ --It contains easy to access dashboard which monitors and provides operational monitoring data of AWS services.
+ --In order to take actions, we can automate actions based on monitoring data and can set alarms and trigger the actions in any time.
+ eg: You can send a sms to your mobile whenever the state of an EC2 instance changes.
+ or you can trigger an alarm whenever two autoscaling groups to add an EC2 instance when the average CPU utilization crosses
+ the threshold.
+ --pay for what you use.
+ 
+ **AWS Cloud Formation:
+ 
+ --Creates and manages stacks of AWS resources wusing templates.
+ --Manage simple and complex application stacks.
+ --define parameters.
+ --easily update application stack.
+ --quicly replicate stack.
+ --no additional charges.
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Architecting on AWS:
+
+1) Designing reilint architecture:
+**Design highly available and fault tolerant architectures:
+ -Multi-AZ deployments.
+ -Multi-region deployments
+ -amazon auto scaling
+ -Elastic load balancing
+ -Elastic IP addresses
+ -Elastic block store
+ -EBS snapshots
+ -Amazon S3
+ -Route 53
+ -Amazon cloudfront.
+ Disaster Recovery(DR):
+ 
+ -Recovery time objective(RTO): It is a maximum length of time after an outage that your companis willing to wait for the recovery process to finish.
+   recovery time objectives is the time it takes to recover the businessprocess after a disruption to its service level.
+   eg: If the disruption occured at 12pm noon, and the RTO is 8 hours, the business process should start working by 8pm.
+    Time = T1 --> infrastructure unavailable
+    Time = T2-->infrastructure restored to be operational at SLA
+    RTO = T2-T1.
+ 
+ -Recovery point objective:(RPO): It is the maximum amount of data loss that your company is willing to accept as measured in time.
+   It is the acceptable amount of data loss measured in time after a disruption occured 
+   eg: If a disaster occured at 12pm noon and the RPO is 1 hour, the system should recover all data that was in the system before 11am.
+     Time = T1--> data recovered till T1
+     time = T3-->infrastructure unavailable(disaster)
+     Time = T2 Infrastructure restored to be operational at SLA.
+     RPO = T3-T1. the data generated between 11am to 12pm noon will be the acceptable amount of data that can be lost by the company before it becomes operational again.
+  
+  -Disaster recovery stratagies:
+   -Backup & restore: data backup options to amazon S3
+    data is backed up from corporate data center or onsite infrastructure using AWS direct connet or over the internet or Import/export options to amazon S3 buckets
+    corporate data centers---->aws direct connect/internet/import&export-----------> amazon S3 bucket(High availability zone)
+     If we use this option it will take long time to recover the data in the event of a disaster or distruption.
+   -Pilot light: pilot light preparation phase is by running the critical and more important core elements of the system in AWS. by the time comes you can rapidly
+    recover all the rest of the elements around the core elements.
+     pilot light recovery phase: pilot light method work better than backup and restore method because core pieces of the system are already and kept up to date.
+   -Warm standby: In warm standy preparation phase a scale down version of a fully standby functional environment is always running in the cloud. 
+      warm standby recovery phase: It further decreases the recovery time compared to pilot light strategy because some services are always running in the
+      background.
+   -Multi site: preparation phase: The systems are active in both on premis environment and cloud.
+      recovery phase: In a disaster situation you can adjust the DNS waiting and divert all the traffic to the aws servers.
+   During disaster times, there are many available ways to improve the fault tolerance. For single region sitrs, you can deplot multi AZ zones to recover from the disaster.
+   for the multi region sites, you can use amazon route 53 to divert the dns traffic to another secondary site would be better option.
+   --In aws for multi region sites, there is always a secondary recovery site should eb available in case of disaster situations. It is either active-active or active-passive 
+   sites.
+   - The secondary sites must be an exact replica of the primary or a scale down version of the rprimary.
+   
+  *Managing Multiple AWS accounts:
+ **AWS Organizations:
+  What is an an aws account?
+  -Compartment for AWS resources(Amazon s3 buckets, ec2, dynamodb etcc)
+  -Access to resources that are controlled using AWS IAM(Identity and access management principals(Users and roles).
+ previuosly there is only one aws account for all the workloads and accessing resources. What if we want so many members are need to access the resources of aws without compromising the compliance
+ alerts. Then came into an idea of multiple account. Eg: an inventoy full of bats, balls, footballs and tennis rackets. all should go to respective boxes instead
+ of all in one basket. Its easy to access.
+ 
+ Why should i use multiple accounts?
+ -group resources for categorization and discovery
+ -improve your security posture with a logical boundary.
+ -limit blast radius in case of unauthorized access.
+ -more easily manage user access to different environments.
+The came AWS Organizations came into existence:
+--It is a central and management across aws accounts.
+Key features:
+1) Manage and define your organization and accounts
+2) control access and permissions
+3) audit, monitor and secure your environment for compliance
+4) share resources across accounts
+5) centrally manage costs and billings.
+What is the difference between aws control tower and aws organization?
+AWS Control tower:
+- Provides automated set-up of a secure, well architected environment.
+- abstracts multiple aws services 
+-best suited if you want automated deployment of a multi account environment with best aws practises.
+-nust be confirgured on a new environment that doesn't already have aws organizations deployed.
+AWS Orgainzations:
+-provides central management and governance for mutiple aws accounts.
+-best suited if you want to define your own custom multi-account environment with advanced governance and management capabilities.
+
+Concepts and terms:
+Master account(*): 
+-account used to create the organization(payore account)
+-central management and governance hub.
+Organizational unit(OU):
+-set of aws account logically grouped within an organization.
+-segment your applications and workloads into aws accounts
+-group accounts into OUs to simplify management.
+-create multiple OUs withinf single organization.
+-Nest OUs inside other OUs to form a hierarchical strcuture.
+Policy:
+-Document describing controls to be applied to a selected set of accounts.
+ 
+Features of Organizational units:
+-Control access and permissions:
+ *deploy comsole and CLI access to accounts(AWS Single Sign-On)
+   Enable AWS SSO: Setup AWS organizations, then enable enable AWS SSO un the AWS Management console.
+         |
+        \ /
+   Connect your corporate identities: Connect your corporate active directory using AWS Directory service
+         |
+        \ /
+   Grant SSO access to your accounts accounts and applications: Grant AD users and groups SSO access to
+   AWS accounts and business applicatons.
+         |
+        \ /
+   Manage user permissions centrally: assign and maintain user permissions acorss your AWS accounts.
+   
+  -deploy console and CLI access to accounts(AWS Signle sign-On)
+  -define permissions based on membership in an organization(aws:principalOrgID condition key )
+  eg: if you want your users from your organization only can add ibjects to your S3 bucket, then you can simply
+  S3 bucket policy likewise.
+  -Additionally author fine-grained permissions guardrails across accounts(Service control policies..
+ 
+ *Service control policies(SCPs):
+ Define the maximum available permissions for IAM entities in an account.
+ SCPs do not grant permission to the users. It joins with IAM to work effectively for the security of the OU.
+ -It basically provides the information that exaclty what a user is allowed to do, SCP provides an outer boundary 
+  of anything that can be done in an account, the IAM permission says what me as an individual user that can 
+  do in an account and my ability to do work is the intersecgtion of those two.
+  -- we can aatch SCPs to the organization root, OUs and individual accounts.
+  --SCPs attached to the root and OUs apply to all OUs and accounts inside of them.
+  In an account-> SCP permissions are as follows: Allow EC2, allow S3
+                  IAM permissions are as follows: allow EC2, allow SQS
+                  so if an user is sitting in inclusive of both these permissions he basically has
+                  only access to: Allow EC2.
+   -Audit, monitor and secure your environment.
+    --aggregate AWS config data ina central location for compliance audting of your accounts(AWS config).
+    --centrally create, provision and modify web application firewalls to secure your applications(AWS firewall manager).
+    --accept business aggrements for organization accounts(AWS Artifact).
+    --allow organization-wide notifications publishing(AWS cloudwatch events).
+    centrally enable audit logginf(AWS cloudtrail).
+    
+    *AWS cloudtrail and AWS organizations.
+    -ensure that all of your aws accounts have logging enables centrally.
+    -prevent auditing from being modified in an account.
+    -have all audit logs consolidated in one central place.
+
+*Share resources across accounts:
+-centrally define critical resources and make them available to your logically isolated workloads in accounts.
+-managed active directory(AWS directory service).
+-aws service catalog
+-aws resource access manager
+  -- amazon VPC transit gateways and subnets
+  --aws license manager configurations
+  --amazon route S3 resolver rules.
+  
+*Designing decoupling mechanisms:
+AWS offer several decoupling mechanisms:-
+1) Elastic load balancer
+2) Autoscaling
+3) Simple queue service(SQS)
+4) Simple Notification service
+5) Amazon kinesis.
+
+1) Elastic load balancer: Elastic load balancer reduces the dependancy of the end user request on the single EC2 instance.
+2 types: 1) Application Load balancer 2) Network Load balancer
+       Application Load balancer                                                         Network Load balancer
+1) It performs load balacning of application layer traffic of layer 7                  1) It perfroms load balancing of layer 3&4
+2) content based load balancing and also cookies.                                      2) In NLB these variables are not considered into load balancing
+3) ALB verifies availability of application through http health checks                 3) NLB validates infrastructure availabilty but not application availability.
+4) Offloads SSL encryption/decryption from EC2 instances                               4) NLB supports end to end encryption.
+5) Allow connection draining                                                           5) connection draining not available in NLB
+6) ALP suports host based and path based routing                                       6) No suuport for host based or path based routing.
+
+2)Auto scaling: auto scaling group produces the dependancy on single EC2 instance by adding capacity when needed.
+AWS offers different types of scaling: 
+1) Dynamic scaling: 
+  -Target tracking scaling: It increases or decreases the current capacity of the group based on a target value by a specific metric
+    eg: when you set temp for your air conditioner, the ac does the rest to maintain that temo in your room.;
+  -Step scaling: steps based scaling
+  -Simple scaling: it scales based on a single scaling adjustment group.
+2) Scheduled scaling: It allows us to set our own scheduled scalings.
+  eg: every week the traffic to a web site is increases on wednesday remains high on thursday and decreases in friday, so we can set up a schduled scaling
+  accodring to this pattern.
+  
+3) Simple queue service(SQS):
+Amazon Simple Queue Service (SQS) will let you send the messages, store the messages, and receive the messages between various software components at any amount, 
+without losing of  actual messages.  Also, without requiring some other services to should be available. so, basically Amazon SQS is a distributed queue system. 
+SQS enables the  web service applications that helps to quickly and reliably queue the messages. These messages have one component in their application that generates
+only when to be consumed by another component. Therefore, the queue is a temporary repository for messages and these messages are awaiting processing. So, Once these 
+messages are processed, the messages also gets deleted from the queue. SQS service basically adds the messages in a queue. and then, Users will pick up these messages from the queue.
+        Standard                                                FIFO
+-unlimited throughput                                    -High throughput(300)
+-At least once delivery                                  -exactly once processing
+ ocassionally message will be delivered more than         available only once until the consumer process it and deletes it.
+ once.
+-Order of messages is often preserved                     -Order of messages is strictly preserved.
+-standard is recommeneded when throughput is important    -recommended tasks that nee to preserve the order of messages is important
+  recommended for high throughput tasks
+Important points to remember:
+1. SQS is not push-based, it is basically on pull-based.
+2. The size of messages in SQS are 256 KB.
+3. There is default retention period in SQS. The default retention period is of 4 days.
+
+4. Messages in SQS of a queue is kept from 1 minute to 14 days.
+5. SQS also guarantees that the messages will only be processed at least once.
+
+4) Amazon SNS(Simple notificatoin service):
+Amazon Web Services Simple Notification Service (AWS SNS) is a web service that automates the process of sending notifications 
+to the subscribers attached to it. SNS provides this service to both application-to-person and application-to-application. 
+It uses the publishers/subscribers paradigm for the push and delivery of messages.
+The data loss is prevented by storing the data across multiple availability zones. It is cost-efficient and provides low-cost 
+infrastructure, especially to mobile users. It sends the notifications through SMS or email to an Amazon Simple Queue Service (SQS), 
+AWS lambda functions, or an HTTP endpoint. When the CPU utilization of an instance goes above 80%, the AWS cloudwatch alarm is triggered. 
+This cloudwatch alarm activates the SNS topic hence notifying the subscribers about the high CPU utilization of the instance. SNS service has a topic that has a unique name.
+It acts as a logical access point and the communication channel between publishers and subscribers.  
+
+ Benefits of using SNS   
+SNS increases Durability. 
+SNS increases Security.
+SNS ensures accuracy.
+SNS reduces and simplifies the cost.
+SNS supports SMS in over 200 countries.
+Clients of SNS 
+Publishers: They communicate with subscribers in an asynchronous manner by producing and sending a message to a topic (i.e a logical access point and communication channel).
+They do not include a specific destination (ex – email id) in each message instead, send a message to the topic. They only send messages to topics they have permission to publish.
+Subscribers: Subscribers like web servers, email addresses, Amazon SQS queues, and AWS Lambda functions receive the notification over one of the supported protocols like Amazon SQS,
+HTTP/S, email, SMS, Lambda) when they are subscribed to the topic. Amazon SNS matches the topic to a list of subscribers who have subscribed to that topic and delivers the message
+to each of those subscribers.
+
+5) Amazon kinesis:
+Amazon Kinesis is a service provided by Amazon Web Service which allows users to process a large amount of data (which can be audio, video, application logs, website clickstreams,
+and IoT telemetry )per second in real-time. In today’s scenario handling of a large amount of data becomes very important and for that, there is a complete whole subject known as
+Big Data which works upon how to process or handle the streams of large amounts of data. So Amazon comes up with a solution known as Amazon Kinesis which is fully managed and automated
+and can handle the real-time large streams of data with ease. It allows users to collect, store, capture, and process a large amount of logs from the distributed
+streams  such as social media feeds. It makes users to focus on the development by taking any amount of data from any sources to process it. And after processing all the
+data,Kinesis also distributes all the data to the consumers simultaneously. 
+Key components
+There are three key components on which kinesis works are as follows:
+
+-Kinesis Firehose
+-kinesis Analytics
+-Kinesis streams
+-Let’s explore them in detail.
+
+Kinesis Firehose:
+Firehose allows the users to load or transformed their streams of data into amazon web service latter transfer for the other functionalities like analyzing or
+storing. It does not require continuous management as it is fully automated and scales automatically according to the data.
+Kinesis Analytics:
+ It allows the streams of data provided by the kinesis firehose and kinesis streams to analyze and process it with the standard SQL.  It analyzes the data
+ format and automatically parses the data and by using some standard interactive schema editor to edit it in recommend schema. It also provides pre-built
+ stream process templates that can be used to select a suitable template for their data analytics.
+
+Kinesis streams:
+ It provides a platform for real-time and continuous processing of data. It is also used to encrypt the sensitive data by using the KMS master keys and the 
+ server-side encryption for the security purpose.
+ 
+ Click stream data--> amazon kinesis data firehose--> amazon kinesis data analytics--> amazon kinesis data firehose--> amazon redshift--> output.
+ Features of Amazon Kinesis
+ Cost-efficient: All the services provided by the amazon are cost-efficient as it follows the pay as you go model which means you have to pay for the
+ service according to the usage, not a flat price. So it becomes advantageous for the user s that they have to pay only what they use.
+ Integrate with other AWS services: Amazon Kinesis allows users to use the other AWS services and integrate with it. Services that can be integrated are
+ Amazon DynamoDB, Amazon Redshift, and all the other services that deal with the large amount of data.
+ Availability: You can access it from anywhere and anytime. Just need a good connectivity of net.
+ Real-time processing- It allows you to work upon the data which is needed to be updated every time with changes instantaneously. Most advantageous feature
+ of Kinesis because real-time processing becomes important when you are dealing with such a huge amount of data.
+Limits of Amazon Kinesis:
+ The limitation that Amazon kinesis has that it only access the stream of records log for 24 hours by default but it can extend but up to only 7 days not longer than that.
+There is no upper limit in the number of streams that can users have in their accounts.
+One shard supports up to 1000 PUT records per second.
+
+**DEFINE PERFORMANT ARCHITECTURE:
+*S3 Performance storage:
+Multipart Upload/Download:
+-allows you to upload a single object as a set of parts.
+-Ideal for storage size>100MB
+steps:
+Initiate the multipart upload---> Sepratae the object into multiple parts--> Upload the parts in any order, one at a time or parallel---> complete the upload.
+benefits of multipart upload:
+-Improved throughput
+-quick recovery from any network issues
+-pause and resume object uploads at any time
+-begin an upload before you know the final object size.
+
+S3 transfer accelration:
+-Fast and secure transfer of files over long distances
+-Utilizes cloud front edge network to accelerate uploads to S3.
+So, Instead of uploading the objects directly to S3 buckets in far away locatons, we can simply get a distinct URL to upload the objects in cloudfront edge locations.
+then that will upload the files in S3 buckets.
+
+*DynamoDB streams, Global tables and throttling:
+-DynamoDB streams captures a time-ordered sequence of item  level modifications in a dynamodb table
+-Durably stores the information for upto 24 hours
+-applications can access a series of stream records which contain an item change, from a dynamodb streams in near real time.
+DynamoDB global tables:
+-A fully managed multiregion and multimaster database.
+-To deliver low-latency data access to your users no matter where they are located on the globe.
+-Uses global network backbone to enable you to build globally distributed applications for globally dispersed users.
+-A global table consists of multiple replica tables that dynamodb treats as a single unit.
+why do we need multi region architecture?
+-To provide low latency and improve thier app experience.
+-low latency generates more user engagement.
+-to facilitate disaster recovery.
+
+DynamoDB Throttling:
+Throttling is one of the most common limitations developers face when using DynamoDB. A throttled DynamoDB table can significantly impact the performance
+of your application and ultimately lead to loss of data. As developers, it is essential to have a good understanding of these limitations to prevent them.
+
+So, in this article, I will discuss what DynamoDB throttling is, the reasons for DynamoDB throttling, and how to deal with throttling issues in DynamoDB 
+to give you a better understanding.
+
+What is DynamoDB Throttling?
+DynamoDB tables consist of multiple partitions. Data records are distributed among the partitions based on the partition key generated by a hash function.
+Each partition can have an equal amount of Read Capacity Units (RCUs) and Write Capacity Units (WCUs) up to a maximum of 3000 RCUs and 1000 WCUs. These read
+and write capacities are equally distributed among each partition. For example, if the RCUs and WCUs are 50 and the table has 2 partitions, each partition 
+will have 25 RCUs and WCUs.
+
+RCU (Read Capacity Units) - One strongly consistent read per second for an item up to 4 KB in size or two eventually consistent reads per second for an item
+up to 4 KB in size.
+WCU (Write Capacity Units) - One write item per second for item size up to 1 KB.
+When a request is made to a DynamoDB table to read or write an item, the request will be routed to the relevant partition, and the read and write capacity of
+that partition will decide if the request is allowed or rejected. If the requests start getting rejected or slow, your DynamoDB table is throttling, and you
+need to take immediate actions to fix it.
+
+In simple terms, DynamoDB throttling is the process of preventing or rejecting reads and writes to a DynamoDB table.
+
+refer this link to know more about dynamodb throttling: https://dynobase.dev/dynamodb-throttling/
+
+DynamoDB TTL: dynamoDB time-to-live
+-Its purpose is to delete that items from the table when the set TTL expires.
+-you need to specify the EPOC timestamp for the item you need to add TTL for
+EPOC timestamp can be calculated from online
+eg: monday, october 28, 2019 at 1:12pm EPOC is 1572268323
+timestamp in milliseconds: 1572268323000 - do not mention epoc timestamp in milliseconds.
+
+*Elastic cache:
+--Apply caching to improve performance.
+--Elasticcache can be used to improve the performance of RDS.
+--It speeds up retrieval of information through in-memory cache.
+Features:
+-support in-memory cache engines: eg: when a query is passed to retirve information, instead of going to database it first goes to cached memory and checks
+ whether it is already asked that query before. If it does then it will simply gives the data directly without checking in database. this saves lots of time.
+- decreases read-load on the database.
+-DB will have greater availability and fewer downtime.
+ElasticCache majorly supports engines:
+1) Redis: key-value which supports data structures like lists, sets, strings, hashes etc..
+2) Memcached: It is fully managed key value store and widely adopted memory object caching system.
+
+ElasticCache for Redis:
+Redis is an open-source data structure store that is primarily used as a database, message broker, or cache. We can assume Redis as a No-SQL database that 
+stores in its memory specific key-value pair kind of data thereby supporting persistent data storage as and when required.
+
+Additionally, Redis can support data structures of various types including sorted sets, hash maps and sets, strings, and so on. It also provides the backbone 
+for various use cases constituting the adoption of specifically defined data structure delivery and performance optimization. One important aspect of using
+Redis is in a situation where we are required data to be fetched and delivered to the user or client in the minimum amount of time. It means that Redis is 
+quite an efficient mechanism for carrying out time-specific actions.
+-Best key-value store
+Mostly used in:
+-In-memory data structure
+-Real-time leaderboards, sessions stores, real-time analytics
+-chat messaging
+-streaming use cases.
+Amazon elasticCache for redis gives real-time apps and sub milliseconds latency.
+amazon elasctic cache for redis manages all the hardware & software setups and patch updates, configuration and failure recovery.
+
+uses:
+dynamic write throttling
+-optimized memory management
+-smooth failovers
+-detailed monitoring metrics.
+-media, gaming, ad-tech, e-commerce, healthcare, financial services and IOT.
+also used in real-time transactional and analytical processing:
+-caching, chat/messaging, gaming leaderboards, geospatial, machine learning, media streaming, queues, real-time analytics, session store.
+
+
+Amazon ElasticCache for Memcached:
+It is a key-value store, it maintains by keeping a key for every object it stores.
+AWS elasticache for memcached administartes the following challeneges:
+-setup, configuration, monitoring, patching, failure recovery.
+Benefits of ElastiCache:
+-Sub-millisecond response times
+-manage spikes in demand
+-cost effective scaling
+Here are some Benefits of using AWS ElastiCache-
+
+Fully-managed – With Amazon ElastiCache you need not worry about backing up, recovering from failure, configuring, monitoring, software patching, etc.
+All this is handled by AWS.
+Scaleable- ElastiCache gives you the flexibility of scaling your business as your application grows. You can even increase the size of your Redis cluster 
+environment to 500 shards, 500 nodes, and perhaps even 340TB of in-memory data.
+Then, without any type of downtime, you can easily scale down the resources if you need to minimize expenditures.
+
+Improved application performance- In-memory data stores offered by ElastiCache significantly cut down on total response times.
+The enhancement is so significant that ordinary read and write operations now take less than a millisecond.
+
+Highly available- AWS ElastiCache delivers high availability with automatic failover mitigation and detection in addition to cluster and non-cluster modes.
+
+uses:
+-gaming
+-mobile apps
+-web apps
+-e-commerce
+
+Compared to redis, memcached is mostly used where frequently accessed data must be in in-memory.
+
+Amazon Cloudfront:
+Amazon Cloudfront is a content delivery network (AWS CDN) that retrieves data stored in the Amazon S3 bucket and distributes it to numerous edge locations
+across the world. Edge locations are the network of data centers distributed worldwide through which content is delivered.
+
+Amazon CloudFront Working
+When a user requests content that is being served with CloudFront, the request is routed to the nearest edge location that gives the lowest latency. This 
+helps the user to access content with the best possible performance. The Amazon cloud architecture functions as follows.
+
+If the content is already cached in the edge location, CloudFront delivers it immediately with the lowest latency possible.
+If the content is not present in the edge location, CloudFront retrieves it from the origin (like Amazon S3 bucket, a MediaPackage channel, or an HTTP server) 
+that has been identified for your content.
+
+Key Terminology in AWS CloudFront.
+Edge Locations: A worldwide network of data centers that deliver content to the end-user are called edge Locations.
+
+Latency: It is a measure of delay or time data takes to get to its destination from the source point. 
+
+Amazon Content Delivery Network (AWS CDN): A content delivery network (CDN) represents a group of servers that are geographically distributed over the globe
+and provide a fast delivery.
+
+Amazon S3 Bucket: An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services.
+
+Origin Access Identity: An Origin Access Identity (OAI) is used for sharing private content via CloudFront. The OAI is a virtual user identity that will be 
+used to give your CF distribution permission to fetch a private object from your origin server (e.g. S3 bucket).
+
+Since now you are familiar with the key terminology, let’s move on to the benefits of CloudFront.
+
+Benefits and Features of AWS CloudFront:
+Globally:
+There are 216 edge locations across the globe. With the number of edge locations, it enables the end-user to use your content without any latency.
+Fast:
+Amazon CloudFront provides a high data transfer rate since the content is already cached in the nearest edge location, it gives the end-user a lightning-fast
+speed delivery of the content. 
+Dynamic Transfer:
+It provides an option for both static and dynamic content delivery. As soon as one byte is loaded into the cache, it is immediately transferred to the client 
+working as a Live Steam.
+Encryption:
+A highly secure application is developed without extra cost. A CloudFront inherits the features of AWS Shield Standard. The edge locations which are spread 
+across the globe feature a 7 Layer Protection named AWS Web Application Firewall. 
+AWS Integration:
+The whole of AWS-supported services for your content or application can be integrated into the CloudFront.
+
+**Improving Network performance in AWS:
+Placement groups helps in improving the peroformance in AWS, there are three types of placement groups:
+1) Cluster placement groups: cluster placement groups keep the instances close to each in an availablity zone.
+  this strategy is necessary to improve performance and get low latency for toghtly coupled node to node communication.
+  eg: high peroformance computing needs instances to be close by to get low latency.
+2) Partition placement groups: these types of placement groups spreads your instances across logical partitions so that the groups of partitions in 
+  partition do not share the underlined hardware with other groups of partition.
+  this strategy is mostly used in hadoop, cassendra and kafka.
+3) Spread placement groups: this placement groups strictly places a small group of instances acorss distinct underlined hardware to reduce correlated failure.
+  spread placement group is recommended for application that have a small number of critical instances that should be kept separated from each other.
+  a spread placement group can span multiple availabilty zones in the same region.
+ --Placement groups can be merged with each other with other placement groups. an instance cannot be part of more than one placement grouup at a time.
+ 
+ Enhanced Networking: enhanced networking uses single root I/O virtualization to perform high performance networking capabilities on supported instance types.
+ -uses single rppt I/O virtualization(SR-IOV)
+ -higher I/O performance
+ -lower CPU utilization
+ -Higher packets per second.
+ Enhanced networking types:
+ 1) Elastic Network Interface(ENI): It is a logical networking component in a VPC that represents your virtual network card. you can create and configure your network 
+ interface in your account and attach them into instances in your VPC.
+ 2) Elastic Network adapter(ENA): Supports network speeds upto 100gbps
+ 3) Elastic Fabric adapter(EFA): It is an network interface for EC2 insatnces that enables customers to run applications requiring high levels of internode communication
+ 
+             ENI                                              ENA                                               EFA
+-Not for high performance requirements            -High bandwidth requirements                 -High performance computing
+-All instance types supported                     -Supported by a few instance types only      -All instance types suuported
+                                                  -Supported by SR-IOV                         -Supports OS bypass.
+                                                
+                                                
+ *Design solutions for elasticity and scalability:
+ 1) Autoscaling
+ 2) RDS Read replica
+ 3) Route 53
+ 
+ 1) Autoscaling:
+ AWS Autoscaling is necessary for application which are having daily, weekly variations in traffic flow, variable traffic patterns such as marketing campaigns
+ with periods of spiky growth.
+-AWS EC2 autscaling always ensures that they are enough ec2 instances are running to handle the traffic load for your applications.
+ECS Autoscaling: It has the ability to increase ot decrease the desired count of task in your application automatically.
+Spot fleet autoscaling: It can either launch instances or terminate insatances within the range specified in response in one or more scaling policies.
+DynamoDB Autoscaling: It uses aws autoscaling service to dynamically adjust and provision throughput capacity on your behalf in response actual traffic patterns.
+Aurora autoscaling: To mmet your connectivity and workload requirements aurora autoscaling dynamically adjusts the number of aurora replicas for an auroraDB cluster
+using single maste replication.
+
+RDS Read replica:
+Amazon RDS Read Replicas provide enhanced performance and durability for Amazon RDS database (DB) instances. They make it easy to elastically scale out beyond the capacity
+constraints of a single DB instance for read-heavy database workloads.
+ As the name itself indicates, read replica allows us to have “non-editable copies” of our production database. This is done by doing asynchronous replication from the
+ primary RDS Instance, to the replicas, i.e. updates made on the source database are reflected on the replicas as well. These replicas can be made in the same 
+ or different regions which can make the recovery of data easier. All the database engines support the replication fundamentals.
+ 
+ App server1-----
+                 |--->Primary Instance(Database server)
+ App server2-----           |
+  (Read/Write)              | (Asynchronous replication)
+                            |
+                           \ /
+                        Read replica(Read only)
+ Differences between read replicas vs multi-AZ vs multi-region deploymenets:
+            
+             Multi-AZ                           Multi-region                            Read replicas
+ -High availability                      -Disaster recovery                         -Scalability
+ -Synchronous replication                -Asynchronous repliaction                  -Asynchronous repliaction
+ -Active primary instance                -All instances are active for reads        -All instances are active- for reads
+ -Automated backups from standby         -Automated backups in each region          -No backups configured by default
+ -Spans at least 2 AZ's                  -Multi-az in each region                   -within AZ or cross AZ or cross region as well.
+ -DB engine upgrade on primary           -Upgrades independent in each region       -upgrades independent from source DB
+ Automatic failover to standby           -Aurora: secondary region becomes master   -manually promoted.
+ 
+ Route 53:
+ Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service. It is basically designed for developers and 
+ corporate to route the end users to Internet applications by translating human-readable names like www.geeksforgeeks.org into the numeric 
+ IP addresses like 192.0.1.1 that computers use to connect to each other.  You cannot use Amazon Route 53 to connect your on-premises network 
+ with AWS Cloud.
+ 
+ Functions of Route53
+If a web application requires a domain name, Route53 service helps to register the name for the website (i.e domain name).
+Whenever a user enters the domain name, Route53 helps to connect the user to the website.
+If any failure is detected at any level, it automatically routes the user to a healthy resource.
+Amazon Route 53 is cost effective, secure and scalable.
+Amazon Route 53 is flexible, highly available and reliable.
+
+Types of Routing Policy 
+Simple routing policy: It is a simple Route53 routing technique that can be used to route internet traffic to a single resource. 
+For example; Web server to a website. Using this, routing multiple records with the same name cannot be created but multiple values
+( such as multiple IP addresses ) can be specified in the same record.
+
+Failover routing policy: Whenever a resource goes unhealthy, this policy allows to route the traffic from unhealthy resource to healthy resource.
+
+Geolocation routing policy: This routing policy routes the traffic to resources on the basis of the geographic location of the user. 
+Geographic locations can be specified by continent, country, or state.  For example; A person residing in France will be redirected to the 
+website in the French language while a person from the US will be redirected to the website in the English language.
+
+Geoproximity routing policy: It routes traffic on the basis of the geographical location of the user and the type of content user wants to access.
+The user can optionally shift traffic from resources at one location to resource at another location. Using this policy, a user can shift more 
+traffic to one location compared to another location by specifying a value known as bias.
+
+Latency routing policy: If a website has to be hosted in multiple regions then a latency based routing policy is used. To improve performance
+for the users, this policy helps in serving requests from the AWS region that provides the lowest latency. To use this policy the latency records
+for the resources are created in multiple AWS regions.
+
+Multivalue routing policy:  It is used when users want Route53 to return multiple values in response to DNS queries. It first checks the health of
+resources and then returns the multiple values only for the health resources.
+
+Weighted routing policy:  This routing policy routes traffic to multiple resources with a single domain name according to the proportion decided by the user.
+
+Benefits of Route 53:
+Highly reliable, scalable, easy to use, health check, flexible, simple, cost-effective, secure and mapped with various asws services.
+
+**Specify Secure applications and architecture:
+*VPC, subnets and CIDR:
+VPC: Amazon VPC is the netwrok environment in the cloud that helps you in provisioning virtual applications that are hosting in the cloud.
+-VPC found in a region, Amazon EC2 instances are launched inside this VPC to stay secured. There can be multiple zones  in the same VPC.
+why you should fit all resources in single VPC?
+Ideal for:
+-High performance computing environments to get low latency.
+-Also best suited for identity management environment to get best security.
+-For small applications supported by a small team.
+But you can have multiple VPC's in single region or accounts.
+A multi-VPC pattern is best suited for:
+-multi-VPC patternns are best suited for a single team or organization that maintains full control over the provisioning and management of all 
+resources in each application environment.
+
+If there is a single IT team--- you can go for multi-VPC
+If there is a large organization with many IT teams---- multi-account would be a better option.
+If there is a high workload isolation requirement---- multi account
+
+How should you divide your VPC into subnets?
+-Subnet is a sub netwrok created inside a VPC by taking a subset of CIDR chosen for VPC. subnet resides completely inside an availability zone.
+-more than one subnet can exist in the same AZ. 
+-an AZ can have multiple subnets.
+- a subnet cannot span acorss avaialabilty zones, however and availabilty can have multiple subnets and  different AZ can span in same VPC.
+
+While creating a VPC, a range of IP addresses are specified in the form of classless inter-domain routing(CIDR).
+so to create a VPC and associated subnets, you need to select a range of private IP addresses that the VPC and its subnets can use and allocate
+all the resources in the VPC. so while creating a VPC a range of IP addresses are specified in the form of CIDR block.
+
+VPCs and IP addresses:
+The block size of aws VPCs can be in between a /28 netmask and /16 netmask.
+lets see how CIDr works
+CIDR:
+-CIDR stands fro classless inter domain routing which represents a block of IP addresses.
+x.x.x.x/n: here x.x.x.x represents IP address and /n represents no. of IP addresses.
+CIDR example:
+IPv4 range 172.10.24.0/24
+IPv4 and IPv6 is the address size of IP addresses. The IPv4 is a 32-bit address, whereas IPv6 is a 128-bit hexadecimal address. IPv6 provides a
+large address space, and it contains a simple header as compared to IPv4.
+24---> 32-24(n) = 8-> 2^8 = 256
+IP address range = 172.10.24.0 to 172.10.24.256
+So if a VPC has an IP address range of  172.10.24.0/24, then the subnets inside that VPC will have the IP addresses ranges from 
+172.10.24.0 to 172.10.24.256
+
+consider an example a VPC with CIDR /22 includes 1024 total IPs
+if there are 4 subnets then 251 IP addresses in each subnet. 1024/4 = 256, then why 251 ip addresses because
+In every IP address range, there are typically four IP addresses that are reserved for special purposes. These addresses are:
+
+Network Address: The first IP address in the range is reserved for the network address. It is used to identify the network itself and cannot be assigned to
+any device on the network.
+
+Broadcast Address: The last IP address in the range is reserved for the broadcast address. This address is used to send a message to all devices on the network, 
+and cannot be assigned to any device.
+
+Default Gateway: The third IP address is reserved for the default gateway, which is the IP address of the device that connects the local network to the wider
+internet.
+
+Loopback Address: The fourth IP address is reserved for the loopback address. This is a special address that is used to test the network card and protocol
+stack on the local device.
+
+
+
+
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+           
+       
+     
+    
+    
+     
+            
+     
+        
+        
+   
+      
+    
+        
+      
+      
+     
+   
+     
+         
+   
+    
+     
+    
+ 
+ 
+              
+      
+          
+ 
+      
+
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+          
+      
+     
+     
+     
+
+      
+    
+    
+        
+   
+          
+  
+    
+  
+   
